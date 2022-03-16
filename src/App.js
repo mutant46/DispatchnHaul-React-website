@@ -13,7 +13,15 @@ import red from "@mui/material/colors/red";
 
 const theme = createTheme({
   palette: {
-    primary: red,
+    primary: {
+      main: "#05c2c8",
+    },
+    secondary: {
+      main: "#000",
+    },
+    info: {
+      main: "#fff",
+    },
   },
   components: {
     MuiListItemText: {

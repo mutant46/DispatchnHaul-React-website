@@ -1,7 +1,13 @@
 import React from "react";
+//  local components
 
+import Hero from "../../components/Hero/Hero";
 const Home = (props) => {
-  return <div style={{ marginTop: "10em" }}>This is home page</div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Home;

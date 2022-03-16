@@ -1,4 +1,6 @@
 import * as React from "react";
+// local components
+import NavbarBrand from "../logo/logo";
 // material ui
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -93,10 +95,10 @@ const Header = () => {
         <AppBar
           position="fixed"
           sx={(theme) => ({
-            backgroundColor: "#1c1c1c",
-            padding: "10px 15px",
-            [theme.breakpoints.down("sm")]: {
-              padding: "10px 7px",
+            backgroundColor: "black",
+            padding: [theme.spacing(1, 5)],
+            [theme.breakpoints.down("md")]: {
+              padding: [theme.spacing(1, 2)],
             },
           })}>
           <Toolbar>
@@ -105,10 +107,9 @@ const Header = () => {
                 <IconButton
                   size="large"
                   edge="start"
-                  color="inherit"
                   aria-label="menu"
                   onClick={() => setIsOpen(true)}
-                  sx={{ mr: 2 }}>
+                  sx={{ mr: 1, color: "white" }}>
                   <MenuIcon />
                 </IconButton>
                 <NavbarBrand history={histroy} />
@@ -118,6 +119,7 @@ const Header = () => {
                 <NavbarBrand history={histroy} />
                 <Box
                   display="flex"
+                  color="white"
                   sx={{
                     marginLeft: "auto ",
                   }}>
@@ -128,14 +130,17 @@ const Header = () => {
                         key={id}
                         variant="h7"
                         component="div"
-                        sx={{
+                        sx={(theme) => ({
                           ml: 7,
                           cursor: "pointer",
                           letterSpacing: "1px",
                           "&:hover": {
-                            color: "red",
+                            color: [theme.palette.primary.main],
                           },
-                        }}
+                          [theme.breakpoints.down("md")]: {
+                            ml: 5,
+                          },
+                        })}
                         onClick={() => HandlePageClick(pageURL)}>
                         {title}
                       </Typography>
@@ -147,22 +152,6 @@ const Header = () => {
           </Toolbar>
         </AppBar>
       </Box>
-    </>
-  );
-};
-
-const NavbarBrand = ({ history }) => {
-  return (
-    <>
-      <Typography
-        variant="h4"
-        component="div"
-        sx={{
-          cursor: "pointer",
-        }}
-        onClick={() => history.push("/")}>
-        Logo
-      </Typography>
     </>
   );
 };

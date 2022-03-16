@@ -1,0 +1,48 @@
+.Check {
+  position: relative;
+  width: max-content;
+}
+
+.Check::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  opacity: 0;
+  animation: flowReverse 1s ease 0.2s forwards;
+  height: 1%;
+  background-color: #fff;
+}
+
+.Check::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  animation: flow 1s ease forwards;
+  height: 1%;
+  background-color: #fff;
+}
+
+@keyframes flow {
+  from {
+    width: 0%;
+  }
+
+  to {
+    widht: 25%;
+  }
+}
+
+@keyframes flowReverse {
+  from {
+    width: 0%;
+  }
+
+  to {
+    widht: 60%;
+    opacity: 1;
+  }
+}
