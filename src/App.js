@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 // Components
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Cta from "./components/Cta/Cta";
 // pages
 import Home from "./pages/Home/Home";
 import Sevices from "./pages/Services/Services";

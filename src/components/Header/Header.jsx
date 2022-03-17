@@ -1,6 +1,7 @@
 import * as React from "react";
 // local components
 import NavbarBrand from "../logo/logo";
+import { pages } from "../../PageData";
 // material ui
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -14,39 +15,8 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
-import HomeIcon from "@mui/icons-material/Home";
-import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
-import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 // react router
 import { useHistory } from "react-router-dom";
-
-const pages = [
-  {
-    id: 1,
-    title: "Home",
-    pageURL: "/",
-    icon: <HomeIcon />,
-  },
-  {
-    id: 2,
-    title: "Services",
-    pageURL: "/services",
-    icon: <MiscellaneousServicesIcon />,
-  },
-  {
-    id: 3,
-    title: "Pricing",
-    pageURL: "/pricing",
-    icon: <LocalOfferIcon />,
-  },
-  {
-    id: 4,
-    title: "Contact",
-    pageURL: "/contact",
-    icon: <MailIcon />,
-  },
-];
 
 const Header = () => {
   const isMobile = useMediaQuery("(max-width:768px)");
@@ -91,67 +61,65 @@ const Header = () => {
           </List>
         </Box>
       </Drawer>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar
-          position="fixed"
-          sx={(theme) => ({
-            backgroundColor: "black",
-            padding: [theme.spacing(1, 5)],
-            [theme.breakpoints.down("md")]: {
-              padding: [theme.spacing(1, 2)],
-            },
-          })}>
-          <Toolbar>
-            {isMobile ? (
-              <>
-                <IconButton
-                  size="large"
-                  edge="start"
-                  aria-label="menu"
-                  onClick={() => setIsOpen(true)}
-                  sx={{ mr: 1, color: "white" }}>
-                  <MenuIcon />
-                </IconButton>
-                <NavbarBrand history={histroy} />
-              </>
-            ) : (
-              <>
-                <NavbarBrand history={histroy} />
-                <Box
-                  display="flex"
-                  color="white"
-                  sx={{
-                    marginLeft: "auto ",
-                  }}>
-                  {pages.map((page) => {
-                    const { title, pageURL, id } = page;
-                    return (
-                      <Typography
-                        key={id}
-                        variant="h7"
-                        component="div"
-                        sx={(theme) => ({
-                          ml: 7,
-                          cursor: "pointer",
-                          letterSpacing: "1px",
-                          "&:hover": {
-                            color: [theme.palette.primary.main],
-                          },
-                          [theme.breakpoints.down("md")]: {
-                            ml: 5,
-                          },
-                        })}
-                        onClick={() => HandlePageClick(pageURL)}>
-                        {title}
-                      </Typography>
-                    );
-                  })}
-                </Box>
-              </>
-            )}
-          </Toolbar>
-        </AppBar>
-      </Box>
+      <AppBar
+        position="fixed"
+        sx={(theme) => ({
+          backgroundColor: "black",
+          padding: [theme.spacing(1, 3)],
+          [theme.breakpoints.down("md")]: {
+            padding: [theme.spacing(1, 0)],
+          },
+        })}>
+        <Toolbar gutter={0}>
+          {isMobile ? (
+            <>
+              <IconButton
+                size="large"
+                edge="start"
+                aria-label="menu"
+                onClick={() => setIsOpen(true)}
+                sx={{ mr: 1, color: "white" }}>
+                <MenuIcon />
+              </IconButton>
+              <NavbarBrand history={histroy} />
+            </>
+          ) : (
+            <>
+              <NavbarBrand history={histroy} />
+              <Box
+                display="flex"
+                color="white"
+                sx={{
+                  marginLeft: "auto ",
+                }}>
+                {pages.map((page) => {
+                  const { title, pageURL, id } = page;
+                  return (
+                    <Typography
+                      key={id}
+                      variant="h7"
+                      component="div"
+                      sx={(theme) => ({
+                        ml: 7,
+                        cursor: "pointer",
+                        letterSpacing: "1px",
+                        "&:hover": {
+                          color: [theme.palette.primary.main],
+                        },
+                        [theme.breakpoints.down("md")]: {
+                          ml: 5,
+                        },
+                      })}
+                      onClick={() => HandlePageClick(pageURL)}>
+                      {title}
+                    </Typography>
+                  );
+                })}
+              </Box>
+            </>
+          )}
+        </Toolbar>
+      </AppBar>
     </>
   );
 };

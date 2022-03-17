@@ -6,7 +6,10 @@ const NavbarBrand = ({ history }) => {
     <>
       <Box
         display="flex"
-        sx={{ alignItems: "center", cursor: "pointer" }}
+        sx={{
+          alignItems: "center",
+          cursor: "pointer",
+        }}
         onClick={() => history.push("/")}>
         <Box
           component="img"

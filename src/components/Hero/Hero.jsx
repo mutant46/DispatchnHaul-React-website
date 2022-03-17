@@ -9,7 +9,7 @@ const Hero = () => {
     <Box
       display="flex"
       sx={(theme) => ({
-        minHeight: "800px",
+        minHeight: "100vh",
         backgroundImage: "url('images/bg-1.jpg')",
         backgroundSize: "cover",
         position: "relative",
@@ -36,12 +36,11 @@ const Hero = () => {
           textShadow: "0px 0px 10px #000",
           zIndex: 2,
         })}>
-        <Grid item md={1} sx={{ backgroundColor: "" }}></Grid>
+        <Grid item md={1} sx={{}}></Grid>
         <Grid
           item
           lg={7}
           sx={(theme) => ({
-            backgroundColor: "",
             [theme.breakpoints.down("lg")]: {
               padding: [theme.spacing(0, 12)],
             },
