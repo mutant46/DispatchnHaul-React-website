@@ -27,7 +27,6 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useHistory } from "react-router-dom";
 
 // reusable styled components
-
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   width: "max-content",
   color: "#CCD1D1",
@@ -57,6 +56,7 @@ const Footer = () => {
     <Box
       sx={{
         backgroundColor: "black",
+        marginTop: (theme) => [theme.spacing(15)],
         paddingTop: (theme) => [theme.spacing(5)],
       }}>
       <Cta />

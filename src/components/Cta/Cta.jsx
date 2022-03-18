@@ -14,7 +14,7 @@ const Cta = () => {
     <Spacing>
       <Box
         sx={(theme) => ({
-          backgroundImage: [`url('images/contact-1.avif')`],
+          backgroundImage: [`url('images/contact-1.jpg')`],
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: [theme.spacing(10, 5)],
@@ -50,7 +50,7 @@ const Cta = () => {
               Leave us a message
             </Typography>
           </Grid>
-          <Grid item sm={12} md={6}>
+          <Grid item sm={12} md={8} lg={6}>
             <Typography
               variant="h6"
               sx={{
@@ -69,7 +69,7 @@ const Cta = () => {
               sx={(theme) => ({
                 color: "white",
                 background: "black",
-                padding: (theme) => [theme.spacing(1, 7)],
+                padding: (theme) => [theme.spacing(1.5, 7)],
                 "&:hover": {
                   background: "black",
                   color: "gray",

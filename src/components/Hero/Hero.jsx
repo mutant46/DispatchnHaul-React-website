@@ -12,6 +12,7 @@ const Hero = () => {
         minHeight: "100vh",
         backgroundImage: "url('images/bg-1.jpg')",
         backgroundSize: "cover",
+        backgroundAttachment: "fixed",
         position: "relative",
         alignItems: "center",
         [theme.breakpoints.down("md")]: {
@@ -81,7 +82,6 @@ const Hero = () => {
             variant="h6"
             color="white"
             sx={(theme) => ({
-              backgroundColor: "",
               fontWeight: "light",
               width: "72%",
               mt: theme.spacing(2),
@@ -101,7 +101,6 @@ const Hero = () => {
             sx={(theme) => ({
               display: "flex",
               alignItems: "center",
-              backgroundColor: "",
               fontWeight: "lighter",
               fontSize: "1.15rem",
               letterSpacing: "1px",
