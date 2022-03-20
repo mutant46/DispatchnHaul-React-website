@@ -61,6 +61,7 @@ const Index = () => {
               sm={12}
               md={6}
               sx={(theme) => ({
+                color: theme.palette.info.main,
                 alignSelf: "center",
                 paddingRight: (theme) => theme.spacing(10),
                 [theme.breakpoints.down("lg")]: {
@@ -72,7 +73,7 @@ const Index = () => {
                   paddingRight: (theme) => theme.spacing(2),
                 },
               })}>
-              <PrimaryHeading variant="h3">
+              <PrimaryHeading variant="h3" color="white">
                 Truck Dispatch Services
               </PrimaryHeading>
               <PTypography component="p">
@@ -117,7 +118,7 @@ const Index = () => {
                   textAlign: "center",
                 },
               })}>
-              <PrimaryHeading variant="h3" mb={4}>
+              <PrimaryHeading variant="h3" mb={4} color="white">
                 Other Services
               </PrimaryHeading>
             </Grid>
@@ -130,6 +131,7 @@ const Index = () => {
                   md={4}
                   key={index}
                   sx={(theme) => ({
+                    color: theme.palette.info.main,
                     display: "flex",
                     alignItems: "center",
                     marginTop: theme.spacing(2),

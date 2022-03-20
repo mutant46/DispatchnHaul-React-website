@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Main from "../../components/Services/Main";
 const Services = () => {
   useEffect(() => {
-    document.title = "Services - DISPATCHNHAUL";
+    document.title = "Services - Dispatch n Haul";
   }, []);
   return <Main />;
 };

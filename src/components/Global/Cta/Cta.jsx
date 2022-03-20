@@ -18,7 +18,7 @@ const Cta = () => {
           backgroundPosition: "center",
           padding: [theme.spacing(10, 5)],
           position: "relative",
-          borderRadius: "12px",
+          borderRadius: 5,
           [theme.breakpoints.down("sm")]: {
             padding: [theme.spacing(6, 2)],
           },
@@ -34,7 +34,7 @@ const Cta = () => {
             left: 0,
             borderRadius: "12px",
             backgroundColor: (theme) =>
-              alpha(theme.palette.secondary.main, 0.15),
+              alpha(theme.palette.secondary.main, 0.2),
           }}></Box>
         <Grid
           container

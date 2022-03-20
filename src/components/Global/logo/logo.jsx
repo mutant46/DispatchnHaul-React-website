@@ -32,7 +32,7 @@ const NavbarBrand = ({ history }) => {
             letterSpacing: "1px",
             color: "white",
           }}>
-          DISPATCHNHAUL
+          Dispatch n Haul
         </Typography>
       </Box>
     </>

@@ -76,9 +76,12 @@ const Index = () => {
       </BgHero>
       <Spacing>
         <MarginLine>
-          <Grid container spacing={2}>
+          <Grid
+            container
+            spacing={2}
+            sx={{ color: (theme) => theme.palette.info.main }}>
             <Grid item xs={12} md={6}>
-              <PrimaryHeading variant="h3">
+              <PrimaryHeading variant="h3" color="white">
                 Truck Dispatch Services Pricing
               </PrimaryHeading>
               <PTypography component="p" pr={2}>
@@ -92,21 +95,23 @@ const Index = () => {
             <Grid item xs={12} md={4} mt={2}>
               <StyledBox
                 sx={{
-                  backgroundColor: "black",
-                  color: "white",
+                  backgroundColor: (theme) =>
+                    theme.palette.secondary.main,
+                  border: "1px solid rgba(255,255,255,0.5)",
+                  color: (theme) => theme.palette.info.main,
                 }}>
                 <StyledTitle variant="h5">Custom</StyledTitle>
                 <br />
-                <Typography variant="h5" sx={{}} mb={3}>
-                  Describe your own custom plan for partial services
+                <Typography variant="h6" sx={{}} mb={3}>
+                  Describe your own custom plan for partial services.
                 </Typography>
                 <Button
                   color="info"
                   onClick={() => history.push("/contact")}
                   sx={{
                     border: "0px",
-                    backgroundColor: (theme) =>
-                      theme.palette.primary.main,
+                    color: "black",
+                    backgroundColor: "white",
                     borderRadius: "20px",
                     "&:hover": {
                       border: "0px",
@@ -114,7 +119,6 @@ const Index = () => {
                         theme.palette.info.main,
                       color: "black",
                     },
-
                     padding: (theme) => theme.spacing(1, 5),
                   }}
                   variant="outlined">
@@ -125,7 +129,14 @@ const Index = () => {
             {plans.map((plan, index) => {
               const { title, points, price, papular } = plan;
               return (
-                <Grid item xs={12} sm={6} md={4} mt={2} key={index}>
+                <Grid
+                  item
+                  xs={12}
+                  sm={6}
+                  md={4}
+                  mt={2}
+                  key={index}
+                  sx={{ color: "black" }}>
                   <StyledBox>
                     {papular ? (
                       <StyledChip
@@ -215,6 +226,7 @@ const Index = () => {
               sm={12}
               md={6}
               sx={(theme) => ({
+                color: theme.palette.info.main,
                 alignSelf: "center",
                 paddingRight: (theme) => theme.spacing(10),
                 [theme.breakpoints.down("lg")]: {
@@ -224,20 +236,20 @@ const Index = () => {
                   paddingRight: (theme) => theme.spacing(2),
                 },
               })}>
-              <PrimaryHeading variant="h3">
+              <PrimaryHeading variant="h3" color="white">
                 We Do All The Heavy Lifting
               </PrimaryHeading>
               <PTypography component="p">
-                <b>DISPATCHNHAUL</b> is a  dispatching company that
+                <b>Dispatch n Haul</b> is a  dispatching company that
                 takes care of all the back-office tasks so you can
                 compete with the big fleets. Normally, a large carrier
                 would engage someone to undertake all of these
                 activities, but for a small carrier, this is
-                prohibitive. That's when <b>DISPATCHNHAUL</b> comes in
-                to help!
+                prohibitive. That's when <b>Dispatch n Haul</b> comes
+                in to help!
               </PTypography>
               <PTypography component="p">
-                Our procedure is straightforward; your professional
+                Our procedure is straightforward, your professional
                 truck dispatcher will follow your instructions. Our
                 freight dispatchers work with you to build the ideal
                 lanes that meet your chosen schedule, whether you want

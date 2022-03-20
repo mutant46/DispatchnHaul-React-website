@@ -21,7 +21,7 @@ const theme = createTheme({
       main: "#000",
     },
     info: {
-      main: "#fff",
+      main: "#D5D8DC",
     },
   },
   components: {
@@ -38,14 +38,16 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      <Switch>
-        <Route exact path="/" render={() => <Home />} />
-        <Route exact path="/services" render={() => <Sevices />} />
-        <Route exact path="/pricing" render={() => <Pricing />} />
-        <Route exact path="/contact" render={() => <Contact />} />
-      </Switch>
-      <Footer />
+      <main style={{ backgroundColor: "black" }}>
+        <Header />
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/services" render={() => <Sevices />} />
+          <Route exact path="/pricing" render={() => <Pricing />} />
+          <Route exact path="/contact" render={() => <Contact />} />
+        </Switch>
+        <Footer />
+      </main>
     </ThemeProvider>
   );
 };

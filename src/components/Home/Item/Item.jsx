@@ -27,7 +27,6 @@ const Item = ({ icon, title, desc }) => {
             width: 55,
             height: 55,
             borderRadius: "8px",
-            color: "white",
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: theme.palette.primary.main,

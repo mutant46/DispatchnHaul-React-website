@@ -55,6 +55,10 @@ const Footer = () => {
   return (
     <Box
       sx={(theme) => ({
+        borderTop:
+          "1px solid " + alpha(theme.palette.primary.main, 0.8),
+        borderTopRightRadius: 40,
+        borderTopLeftRadius: 40,
         backgroundColor: "black",
         marginTop: (theme) => [theme.spacing(18)],
         paddingTop: (theme) => [theme.spacing(5)],

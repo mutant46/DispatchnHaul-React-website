@@ -57,7 +57,7 @@ const Hero = () => {
             className="Check"
             sx={(theme) => ({
               fontWeight: "bold",
-              letterSpacing: "5px",
+              letterSpacing: "3px",
               textShadow: "none",
               margin: [theme.spacing(2, 0)],
               padding: [theme.spacing(1, 0)],
@@ -65,7 +65,7 @@ const Hero = () => {
                 fontSize: "0.75rem",
               },
             })}>
-            DISPATCHNHAUL
+            DISPATCH N HAUL
           </Typography>
           <Typography
             variant="h3"
@@ -75,7 +75,7 @@ const Hero = () => {
                 fontSize: "2.5rem",
               },
             })}>
-            We are the best company for you dispatch needs
+            We are the best company for your dispatch needs
           </Typography>
           <Typography
             variant="h6"

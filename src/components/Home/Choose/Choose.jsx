@@ -17,11 +17,11 @@ const Choose = () => {
   return (
     <Spacing>
       <MarginLine>
-        <Grid container>
+        <Grid container sx={{ color: "lightgray" }}>
           <Grid item xs={12}>
             <PrimaryHeading
               variant="h3"
-              color=""
+              color="white"
               mb={2}
               className="Choose">
               WHY <br /> CHOOSE US
@@ -45,7 +45,7 @@ const Choose = () => {
               What makes our services better than our contenders is
               that our services are very reasonable regarding cost. We
               have crafted plans for different needs to help you
-              choose the one that suits your budget and demands
+              choose the one that suits your budget and demands.
             </PTypography>
             <PTypography
               component="p"

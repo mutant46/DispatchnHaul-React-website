@@ -46,12 +46,12 @@ export const usp = [
   },
   {
     title: "Reliable",
-    desc: "We find loads from reliable sources like DAT load Boards ,123 Load Boards and many other reference",
+    desc: "We find loads from reliable sources like DAT load Boards, 123 Load Boards and many other reference.",
     icon: <HdrStrongIcon />,
   },
   {
     title: "Flexible Plans",
-    desc: "We provide flexible means for payment through bank,comcheck, paypal or all type of credit and debit cards",
+    desc: "We provide flexible means for payment through bank, comcheck, paypal or all type of credit and debit cards.",
     icon: <LocalOfferIcon />,
   },
 ];
@@ -93,7 +93,7 @@ export const plans = [
   },
   {
     title: "Premium",
-    price: 500,
+    price: 350,
     papular: true,
     points: [
       "Additional Services",

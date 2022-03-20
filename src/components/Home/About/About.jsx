@@ -8,7 +8,7 @@ import {
   MarginLine,
 } from "../../Reusable/Reusable";
 // Material UI
-import { Grid, Box } from "@mui/material";
+import { Grid, Box, backdropClasses } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 // react router
 import { useHistory } from "react-router-dom";
@@ -26,6 +26,7 @@ const About = () => {
             sm={12}
             md={6}
             sx={(theme) => ({
+              color: theme.palette.info.main,
               alignSelf: "center",
               paddingRight: (theme) => theme.spacing(10),
               [theme.breakpoints.down("lg")]: {
@@ -37,11 +38,14 @@ const About = () => {
                 paddingRight: (theme) => theme.spacing(2),
               },
             })}>
-            <PrimaryHeading variant="h3">ABOUT US</PrimaryHeading>
+            <PrimaryHeading variant="h3" color="white">
+              ABOUT US
+            </PrimaryHeading>
             <PTypography component="p">
               We are the leader of the logistics industry, with
               cutting-edge tracking technology for safe pickup and
-              delivery and skilled staff to help you make quickly.
+              delivery and skilled staff to help you achieve quick
+              solutions.
             </PTypography>
             <PTypography component="p">
               5000+ carrier database, daily carrier compliance and

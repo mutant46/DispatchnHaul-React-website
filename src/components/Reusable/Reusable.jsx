@@ -11,8 +11,8 @@ export const PTypography = styled(Typography)(({ theme }) => ({
 }));
 
 export const PrimaryButton = styled(Button)(({ theme }) => ({
-  color: "white",
-  background: "black",
+  color: "black",
+  background: "white",
   marginTop: [theme.spacing(4)],
   padding: [theme.spacing(1.5, 7)],
   "&:hover": {
@@ -39,8 +39,11 @@ export const MarginLine = styled(Box)(({ theme }) => ({
     padding: theme.spacing(0, 6),
   },
   [theme.breakpoints.down("md")]: {
-    marginTop: [theme.spacing(3)],
+    marginTop: [theme.spacing(5)],
   },
+  // [theme.breakpoints.down("sm")]: {
+  //   marginTop: [theme.spacing(3)],
+  // },
 }));
 
 export const BgHero = styled(Box)(({ theme }) => ({
@@ -59,7 +62,7 @@ export const BgOverlay = styled(Box)(({ theme }) => ({
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: alpha(theme.palette.secondary.main, 0.55),
+  backgroundColor: alpha(theme.palette.secondary.main, 0.6),
 }));
 
 export const BgAntiOverlay = styled(Box)(({ theme }) => ({
@@ -71,4 +74,9 @@ export const StyledChip = styled(Chip)(({ theme }) => ({
   position: "absolute",
   right: "5%",
   top: "5%",
+}));
+
+export const StyledSpan = styled(Typography)(({ theme }) => ({
+  fontWeight: "bold",
+  color: "white",
 }));

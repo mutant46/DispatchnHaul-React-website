@@ -1,0 +1,10 @@
+.input:hover {
+  border-color: white;
+  outline-color: white;
+}
+
+.input::before,
+.input::after {
+  background-color: white;
+  bordercolor: "white";
+}

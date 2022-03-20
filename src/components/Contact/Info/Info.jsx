@@ -37,8 +37,14 @@ const Info = () => {
     <Spacing>
       <MarginLine>
         <Grid container>
-          <Grid item xs={12} md={6}>
-            <PrimaryHeading variant="h3">Get In Touch</PrimaryHeading>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{ color: (theme) => theme.palette.info.main }}>
+            <PrimaryHeading variant="h3" color="white">
+              Get In Touch
+            </PrimaryHeading>
             <PTypography component="p" pr={2}>
               With years of experience in trucking and freight
               industry, we have learned how to negotiate the best
@@ -54,11 +60,12 @@ const Info = () => {
             xs={12}
             md={4}
             mt={4}
-            sx={{
+            sx={(theme) => ({
+              backgroundColor: "white",
               padding: (theme) => theme.spacing(4, 4),
               boxShadow: "0px 1px 10px rgba(0,0,0,0.4)",
               borderRadius: "10px",
-            }}>
+            })}>
             <StyledAvatar>
               <StyledPhoneIcon />
             </StyledAvatar>
@@ -75,6 +82,7 @@ const Info = () => {
             md={4}
             mt={4}
             sx={(theme) => ({
+              backgroundColor: "white",
               padding: theme.spacing(4, 4),
               boxShadow: "0px 1px 10px rgba(0,0,0,0.4)",
               borderRadius: "10px",
@@ -90,7 +98,9 @@ const Info = () => {
               email channel.
             </PTypography>
             <br />
-            <Link href="mailto:Dispatch@dispatchnhaul.com">
+            <Link
+              href="mailto:Dispatch@dispatchnhaul.com"
+              color="primary">
               Dispatch@dispatchnhaul.com
             </Link>
           </Grid>
