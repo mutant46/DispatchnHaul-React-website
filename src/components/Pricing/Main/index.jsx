@@ -125,7 +125,7 @@ const Index = () => {
             {plans.map((plan, index) => {
               const { title, points, price, papular } = plan;
               return (
-                <Grid item xs={12} sm={6} md={4} mt={2}>
+                <Grid item xs={12} sm={6} md={4} mt={2} key={index}>
                   <StyledBox>
                     {papular ? (
                       <StyledChip
