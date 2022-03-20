@@ -8,7 +8,7 @@ import {
   MarginLine,
 } from "../../Reusable/Reusable";
 // Material UI
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 // react router
 import { useHistory } from "react-router-dom";

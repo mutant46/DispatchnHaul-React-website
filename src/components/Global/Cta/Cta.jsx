@@ -1,7 +1,6 @@
 import React from "react";
 // local components
 import Spacing from "../spacing/Sapcing";
-import Logo from "../logo/logo";
 // material ui
 import { Box, Typography, Grid, Button } from "@mui/material";
 import { alpha } from "@mui/material/styles";

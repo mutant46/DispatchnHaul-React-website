@@ -22,7 +22,7 @@ import {
   ListItemText,
   Button,
 } from "@mui/material";
-import { styled, alpha } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 // react router
 import { useHistory } from "react-router-dom";

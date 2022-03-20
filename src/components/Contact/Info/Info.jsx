@@ -8,7 +8,7 @@ import {
 import Spacing from "../../Global/spacing/Sapcing";
 
 // material ui
-import { Box, Grid, Typography, Avatar, Link } from "@mui/material";
+import { Grid, Avatar, Link } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { alpha, styled } from "@mui/material/styles";
