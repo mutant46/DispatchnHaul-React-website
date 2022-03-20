@@ -27,7 +27,7 @@ const Index = () => {
       <BgHero
         display="flex"
         sx={(theme) => ({
-          backgroundImage: "url('images/service-1.avif')",
+          backgroundImage: "url('images/service-1.jpg')",
           backgroundAttachment: "fixed",
         })}>
         <BgOverlay />
