@@ -2,15 +2,15 @@ import React from "react";
 // React Router
 import { Route, Switch } from "react-router-dom";
 // Components
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Cta from "./components/Cta/Cta";
+import Header from "./components/Global/Header/Header";
+import Footer from "./components/Global/Footer/Footer";
 // pages
 import Home from "./pages/Home/Home";
 import Sevices from "./pages/Services/Services";
+import Contact from "./pages/Contact/Contact";
+import Pricing from "./pages/Pricing/Pricing";
 // material-ui
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import red from "@mui/material/colors/red";
 
 const theme = createTheme({
   palette: {
@@ -42,6 +42,8 @@ const App = () => {
       <Switch>
         <Route exact path="/" render={() => <Home />} />
         <Route exact path="/services" render={() => <Sevices />} />
+        <Route exact path="/pricing" render={() => <Pricing />} />
+        <Route exact path="/contact" render={() => <Contact />} />
       </Switch>
       <Footer />
     </ThemeProvider>

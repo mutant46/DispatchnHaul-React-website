@@ -1,0 +1,14 @@
+.Choose {
+  position: relative;
+}
+
+.Choose::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 10%;
+  height: 4%;
+  border-radius: 10px;
+  background-color: black;
+}

@@ -35,7 +35,7 @@ const Cta = () => {
             left: 0,
             borderRadius: "12px",
             backgroundColor: (theme) =>
-              alpha(theme.palette.secondary.main, 0.2),
+              alpha(theme.palette.secondary.main, 0.15),
           }}></Box>
         <Grid
           container
@@ -44,10 +44,13 @@ const Cta = () => {
           <Grid item xs={12}>
             <Typography
               variant="h4"
-              sx={{
+              sx={(theme) => ({
                 fontWeight: "bold",
-              }}>
-              Leave us a message
+                [theme.breakpoints.down("sm")]: {
+                  fontSize: "1.5rem",
+                },
+              })}>
+              GET IN TOUCH
             </Typography>
           </Grid>
           <Grid item sm={12} md={8} lg={6}>
@@ -56,8 +59,8 @@ const Cta = () => {
               sx={{
                 fontWeight: "light",
               }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Iste obcaecati non veniam nostrum atque? Beatae?
+              Do you have a question? We can help you through our
+              email channel.
             </Typography>
           </Grid>
           <Grid item xs={12}>

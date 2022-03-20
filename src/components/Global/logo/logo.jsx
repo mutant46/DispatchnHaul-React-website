@@ -27,9 +27,9 @@ const NavbarBrand = ({ history }) => {
           component="div"
           sx={{
             ml: 1,
-            // fontFamily: "Russo One",
+            fontFamily: "Abel",
             cursor: "pointer",
-            letterSpacing: "1.5px",
+            letterSpacing: "1px",
             color: "white",
           }}>
           DISPATCHNHAUL

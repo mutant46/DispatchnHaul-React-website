@@ -1,7 +1,7 @@
 import * as React from "react";
 // local components
 import NavbarBrand from "../logo/logo";
-import { pages } from "../../PageData";
+import { pages } from "../../../Data";
 // material ui
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -62,9 +62,10 @@ const Header = () => {
         </Box>
       </Drawer>
       <AppBar
-        position="fixed"
+        position="sticky"
         sx={(theme) => ({
           backgroundColor: "black",
+          boxShadow: "none",
           padding: [theme.spacing(1, 3)],
           [theme.breakpoints.down("md")]: {
             padding: [theme.spacing(1, 0)],

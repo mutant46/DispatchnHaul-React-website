@@ -9,10 +9,9 @@ const Hero = () => {
     <Box
       display="flex"
       sx={(theme) => ({
-        minHeight: "100vh",
+        minHeight: "91vh",
         backgroundImage: "url('images/bg-1.jpg')",
         backgroundSize: "cover",
-        backgroundAttachment: "fixed",
         position: "relative",
         alignItems: "center",
         [theme.breakpoints.down("md")]: {

@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 //  local components
-import Hero from "../../components/Hero/Hero";
-import About from "../../components/About/About";
-import Choose from "../../components/Choose/Choose";
+import Hero from "../../components/Home/Hero/Hero";
+import About from "../../components/Home/About/About";
+import Choose from "../../components/Home/Choose/Choose";
+import Attract from "../../components/Home/Attract/Attract";
 const Home = (props) => {
+  useEffect(() => {
+    document.title = "DISPATCHNHAUL";
+  }, []);
   return (
     <>
       <Hero />
       <About />
+      <Attract />
       <Choose />
     </>
   );

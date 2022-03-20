@@ -1,6 +1,6 @@
 import React from "react";
 // local components
-import { PTypography } from "../Reusable/Reusable";
+import { PTypography } from "../../Reusable/Reusable";
 import { Box, Typography } from "@mui/material";
 // material ui
 

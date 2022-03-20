@@ -1,14 +1,14 @@
 import React from "react";
 import "./choose.css";
-import { usp } from "../../Choosedata";
+import { usp } from "../../../Data";
 // local components
-import Spacing from "../spacing/Sapcing";
+import Spacing from "../../Global/spacing/Sapcing";
 import Item from "../Item/Item";
 import {
   PTypography,
   PrimaryHeading,
   MarginLine,
-} from "../Reusable/Reusable";
+} from "../../Reusable/Reusable";
 // materail ui
 import { Grid } from "@mui/material";
 // react router dom
@@ -19,7 +19,11 @@ const Choose = () => {
       <MarginLine>
         <Grid container>
           <Grid item xs={12}>
-            <PrimaryHeading variant="h3" color="" className="Choose">
+            <PrimaryHeading
+              variant="h3"
+              color=""
+              mb={2}
+              className="Choose">
               WHY <br /> CHOOSE US
             </PrimaryHeading>
           </Grid>
@@ -35,14 +39,22 @@ const Choose = () => {
               component="p"
               sx={(theme) => ({
                 [theme.breakpoints.up("md")]: {
-                  width: "75%",
+                  width: "70%",
                 },
               })}>
               What makes our services better than our contenders is
               that our services are very reasonable regarding cost. We
               have crafted plans for different needs to help you
-              choose the one that suits your budget and demands. We
-              eliminate the hustle of paying 10% or more to truck
+              choose the one that suits your budget and demands
+            </PTypography>
+            <PTypography
+              component="p"
+              sx={(theme) => ({
+                [theme.breakpoints.up("md")]: {
+                  width: "60%",
+                },
+              })}>
+              We eliminate the hustle of paying 10% or more to truck
               dispatch service for every load. This is why our
               trucking dispatch services have become popular globally
               for all dispatch needs.

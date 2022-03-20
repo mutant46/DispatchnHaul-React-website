@@ -3,7 +3,7 @@ import React from "react";
 import Spacing from "../spacing/Sapcing";
 import Cta from "../Cta/Cta";
 import Logo from "../logo/logo";
-import { pages } from "../../PageData";
+import { pages } from "../../../Data";
 // material ui
 import {
   Box,
@@ -54,11 +54,14 @@ const Footer = () => {
   };
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         backgroundColor: "black",
-        marginTop: (theme) => [theme.spacing(15)],
+        marginTop: (theme) => [theme.spacing(18)],
         paddingTop: (theme) => [theme.spacing(5)],
-      }}>
+        [theme.breakpoints.down("sm")]: {
+          marginTop: (theme) => [theme.spacing(8)],
+        },
+      })}>
       <Cta />
       <Spacing>
         <Box
@@ -97,12 +100,12 @@ const Footer = () => {
                 <StyledListItem sx={{ marginBottom: "0em" }}>
                   <MailIcon />
                   <Link
-                    href="mailto:info@dispatchnhaul.com"
+                    href="mailto:Dispatch@dispatchnhaul.com"
                     ml={1}
                     underline="none"
                     sx={{ letterSpacing: "1px" }}
                     color="inherit">
-                    Info@dispatchnhaul.com
+                    Dispatch@dispatchnhaul.com
                   </Link>
                 </StyledListItem>
                 <StyledListItem
@@ -114,12 +117,12 @@ const Footer = () => {
                   })}>
                   <LocalPhoneIcon />
                   <Link
-                    href="tel:0000"
+                    href="tel:7327247721"
                     ml={1}
                     underline="none"
                     sx={{ letterSpacing: "1px" }}
                     color="inherit">
-                    +1 (000) 000-0000
+                    732-724-7721
                   </Link>
                 </StyledListItem>
               </List>

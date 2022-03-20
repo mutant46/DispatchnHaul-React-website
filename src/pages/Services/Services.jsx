@@ -1,9 +1,11 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+// local components
+import Main from "../../components/Services/Main";
 const Services = () => {
-  return (
-    <div style={{ marginTop: "10em" }}>This is Services page</div>
-  );
+  useEffect(() => {
+    document.title = "Services - DISPATCHNHAUL";
+  }, []);
+  return <Main />;
 };
 
 export default Services;
