@@ -30,13 +30,12 @@ import { useHistory } from "react-router-dom";
 const StyledTitle = styled(Typography)(({ theme }) => ({
   fontWeight: "bold",
   margin: "auto",
-  textShadow: "1px 1px 5px rgba(0,0,0,0.3)",
+  textShadow: "0px 1px 5px rgba(0,0,0,0.2)",
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
   position: "relative",
-  backgroundColor: "white",
-  boxShadow: "1px 1px 10px rgba(0,0,0,0.4)",
+  backgroundColor: theme.palette.info[500],
   padding: "30px",
   borderRadius: "10px",
 }));
@@ -60,6 +59,7 @@ const Index = () => {
           <Typography
             color="white"
             variant="h2"
+            component="h3"
             sx={(theme) => ({
               fontWeight: "bold",
               letterSpacing: "1px",
@@ -81,7 +81,10 @@ const Index = () => {
             spacing={2}
             sx={{ color: (theme) => theme.palette.info.main }}>
             <Grid item xs={12} md={6}>
-              <PrimaryHeading variant="h3" color="white">
+              <PrimaryHeading
+                variant="h3"
+                component="h1"
+                color="white">
                 Truck Dispatch Services Pricing
               </PrimaryHeading>
               <PTypography component="p" pr={2}>
@@ -136,7 +139,9 @@ const Index = () => {
                   md={4}
                   mt={2}
                   key={index}
-                  sx={{ color: "black" }}>
+                  sx={{
+                    color: "black",
+                  }}>
                   <StyledBox>
                     {papular ? (
                       <StyledChip
@@ -236,17 +241,20 @@ const Index = () => {
                   paddingRight: (theme) => theme.spacing(2),
                 },
               })}>
-              <PrimaryHeading variant="h3" color="white">
-                We Do All The Heavy Lifting
+              <PrimaryHeading
+                variant="h3"
+                component="h2"
+                color="white">
+                Your Dedicated Truck Dispatcher
               </PrimaryHeading>
               <PTypography component="p">
-                <b>Dispatch n Haul</b> is a  dispatching company that
-                takes care of all the back-office tasks so you can
-                compete with the big fleets. Normally, a large carrier
-                would engage someone to undertake all of these
-                activities, but for a small carrier, this is
-                prohibitive. That's when <b>Dispatch n Haul</b> comes
-                in to help!
+                <b>Dispatch n Haul</b> deals with all kinds of turck
+                i.e. Reefer, PowerOnly, boxtruck Step Deck  and takes
+                care of all the back-office tasks so you can compete
+                with the big fleets. Normally, a large carrier would
+                engage someone to undertake all of these activities,
+                but for a small carrier, this is prohibitive. That's
+                when <b>Dispatch n Haul</b> comes in to help!
               </PTypography>
               <PTypography component="p">
                 Our procedure is straightforward, your professional

@@ -52,10 +52,10 @@ const Attract = () => {
             to deliver high-quality logistics services at reduced
             costs for improved efficiency of the business. <br />
             <br /> Our carriers offer a range of equipment and feature
-            like Dry Vans, Flatbeds, Heavy Equipment, and Temperature
-            Controlled transportation.What makes us different from
-            other logistics companies is the relationship with our
-            carriers.
+            like Dry Vans, Flatbeds, Good paying loads Dispatcher,
+            Heavy Equipment, and Temperature Controlled
+            transportation.What makes us different from other
+            logistics companies is the relationship with our carriers.
           </PTypography>
           <PrimaryButton
             onClick={() => history.push("/contact")}

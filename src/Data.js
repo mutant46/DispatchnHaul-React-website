@@ -36,7 +36,7 @@ export const pages = [
 export const usp = [
   {
     title: "Professional",
-    desc: "We have professional dispatcher with 3 to 5 years of experience that can make you worth hauling in secondsnience.",
+    desc: "We have professional dispatcher with 5 to 8 years of experience that can make you worth hauling in secondsnience.",
     icon: <WorkIcon />,
   },
   {

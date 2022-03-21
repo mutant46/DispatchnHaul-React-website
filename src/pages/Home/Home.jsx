@@ -6,7 +6,8 @@ import Choose from "../../components/Home/Choose/Choose";
 import Attract from "../../components/Home/Attract/Attract";
 const Home = (props) => {
   useEffect(() => {
-    document.title = "Dispatch n Haul";
+    document.title =
+      "Dispatch services for drivers and trucking companies | Dispatch n Haul";
   }, []);
   return (
     <>

@@ -22,6 +22,7 @@ const theme = createTheme({
     },
     info: {
       main: "#D5D8DC",
+      500: "#F8F9F9",
     },
   },
   components: {

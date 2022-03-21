@@ -39,6 +39,7 @@ const Index = () => {
           <Typography
             color="white"
             variant="h2"
+            compoenent="h3"
             sx={(theme) => ({
               fontWeight: "bold",
               letterSpacing: "1px",
@@ -55,7 +56,7 @@ const Index = () => {
       </BgHero>
       <Spacing>
         <MarginLine>
-          <Grid container spacing={2}>
+          <Grid container spacing={4}>
             <Grid
               item
               sm={12}
@@ -63,17 +64,20 @@ const Index = () => {
               sx={(theme) => ({
                 color: theme.palette.info.main,
                 alignSelf: "center",
-                paddingRight: (theme) => theme.spacing(10),
+                paddingRight: (theme) => theme.spacing(8),
                 [theme.breakpoints.down("lg")]: {
                   paddingRight: (theme) => theme.spacing(5),
                 },
                 [theme.breakpoints.down("md")]: {
-                  order: 1,
+                  order: 0,
                   paddingTop: theme.spacing(5),
                   paddingRight: (theme) => theme.spacing(2),
                 },
               })}>
-              <PrimaryHeading variant="h3" color="white">
+              <PrimaryHeading
+                variant="h3"
+                component="h1"
+                color="white">
                 Truck Dispatch Services
               </PrimaryHeading>
               <PTypography component="p">
@@ -101,6 +105,7 @@ const Index = () => {
               <Box
                 component="img"
                 src="/images/bg-1.jpg"
+                alt="Truck Dispatch Services"
                 sx={{ width: "100%", height: "auto" }}
               />
             </Grid>

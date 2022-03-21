@@ -61,9 +61,8 @@ const Info = () => {
             md={4}
             mt={4}
             sx={(theme) => ({
-              backgroundColor: "white",
+              backgroundColor: theme.palette.info[500],
               padding: (theme) => theme.spacing(4, 4),
-              boxShadow: "0px 1px 10px rgba(0,0,0,0.4)",
               borderRadius: "10px",
             })}>
             <StyledAvatar>
@@ -82,9 +81,8 @@ const Info = () => {
             md={4}
             mt={4}
             sx={(theme) => ({
-              backgroundColor: "white",
+              backgroundColor: theme.palette.info[500],
               padding: theme.spacing(4, 4),
-              boxShadow: "0px 1px 10px rgba(0,0,0,0.4)",
               borderRadius: "10px",
               [theme.breakpoints.up("md")]: {
                 marginLeft: 3,

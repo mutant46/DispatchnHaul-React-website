@@ -68,14 +68,15 @@ const Hero = () => {
             DISPATCH N HAUL
           </Typography>
           <Typography
-            variant="h3"
+            variant="h2"
+            componenet="h1"
             color="white"
             sx={(theme) => ({
               [theme.breakpoints.down("md")]: {
                 fontSize: "2.5rem",
               },
             })}>
-            We are the best company for your dispatch needs
+            We are the best company for your dispatch needs.
           </Typography>
           <Typography
             variant="h6"

@@ -4,7 +4,7 @@ import Info from "../../components/Contact/Info/Info";
 import Form from "../../components/Contact/Form";
 const Contact = () => {
   useEffect(() => {
-    document.title = "Contact - Dispatch n Haul";
+    document.title = "Our contacts | Dispatch n Haul";
   }, []);
   return (
     <>

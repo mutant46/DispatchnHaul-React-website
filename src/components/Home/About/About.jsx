@@ -8,7 +8,7 @@ import {
   MarginLine,
 } from "../../Reusable/Reusable";
 // Material UI
-import { Grid, Box, backdropClasses } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 // react router
 import { useHistory } from "react-router-dom";
@@ -42,10 +42,10 @@ const About = () => {
               ABOUT US
             </PrimaryHeading>
             <PTypography component="p">
-              We are the leader of the logistics industry, with
+              We are the leader of the logistics industry with
               cutting-edge tracking technology for safe pickup and
-              delivery and skilled staff to help you achieve quick
-              solutions.
+              delivery and skilled staff serving the continental U.S.
+              & North America.
             </PTypography>
             <PTypography component="p">
               5000+ carrier database, daily carrier compliance and
@@ -70,6 +70,7 @@ const About = () => {
             })}>
             <Box
               component="img"
+              alt="about truck dispatch"
               src={
                 isMobile ? "images/about-3.jpg" : "images/about-2.jpg"
               }
