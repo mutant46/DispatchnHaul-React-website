@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 // local componets
 import {
@@ -6,11 +6,12 @@ import {
   PrimaryHeading,
   PrimaryButton,
 } from "../../Reusable/Reusable";
+import Alert from "../Alert";
 import CustomTextFiled from "../TextField";
 import Spacing from "../../Global/spacing/Sapcing";
 //  material UI
-import { Grid, Alert } from "@mui/material";
-import CheckIcon from "@mui/icons-material/Check";
+import { Grid } from "@mui/material";
+import CircularProgress from "@mui/material/CircularProgress";
 
 // formil forms and yup
 import { Formik, Form } from "formik";
@@ -37,7 +38,15 @@ const FORM_VALIDATION_SCHEMA = Yup.object().shape({
 });
 
 const Index = () => {
-  const [status, setStatus] = React.useState(false);
+  const [status, setStatus] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [parentSize, setParentSize] = useState(0);
+  const parentRef = useRef(null);
+
+  useEffect(() => {
+    const { clientHeight, clientWidth } = parentRef.current;
+    setParentSize(Math.min(clientHeight, clientWidth));
+  }, []);
   return (
     <Spacing>
       <MarginLine>
@@ -49,7 +58,6 @@ const Index = () => {
           validationSchema={FORM_VALIDATION_SCHEMA}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setTimeout(async () => {
-              setSubmitting(false);
               try {
                 await axios
                   .post(
@@ -58,11 +66,14 @@ const Index = () => {
                   )
                   .then((response) => {
                     if (response.status === 200) {
+                      setShowAlert(true);
                       setStatus(true);
+                      setSubmitting(false);
                       resetForm();
                     }
                   });
               } catch (error) {
+                setStatus(false);
                 console.log(error);
               }
             }, 400);
@@ -71,22 +82,7 @@ const Index = () => {
             <Form>
               <Grid container mt={3} spacing={4}>
                 <Grid item xs={12}>
-                  {status ? (
-                    <Alert
-                      icon={<CheckIcon fontSize="inherit" />}
-                      severity="success"
-                      sx={(theme) => ({
-                        color: "green",
-                        backgroundColor: (theme) =>
-                          theme.palette.info[500],
-                        [theme.breakpoints.up("md")]: {
-                          width: "50%",
-                        },
-                      })}>
-                      The form has been sent. We will get back to you
-                      shortly.
-                    </Alert>
-                  ) : null}
+                  {showAlert ? <Alert status={status} /> : null}
                 </Grid>
                 <Grid item xs={12} md={4}>
                   <CustomTextFiled
@@ -114,9 +110,14 @@ const Index = () => {
                 </Grid>
                 <Grid item xs={12} md={12}>
                   <PrimaryButton
+                    ref={parentRef}
                     type="submit"
                     disabled={isSubmitting}>
-                    Send
+                    {!isSubmitting ? (
+                      "Send"
+                    ) : (
+                      <CircularProgress size={0.5 * parentSize} />
+                    )}
                   </PrimaryButton>
                 </Grid>
               </Grid>
