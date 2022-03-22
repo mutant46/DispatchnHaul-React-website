@@ -1,4 +1,5 @@
 import * as React from "react";
+import axios from "axios";
 // local componets
 import {
   MarginLine,
@@ -47,10 +48,23 @@ const Index = () => {
           initialValues={{ ...INITIAL_FORM_STATE }}
           validationSchema={FORM_VALIDATION_SCHEMA}
           onSubmit={(values, { setSubmitting, resetForm }) => {
-            setTimeout(() => {
+            setTimeout(async () => {
               setSubmitting(false);
-              setStatus(true);
-              resetForm();
+              try {
+                await axios
+                  .post(
+                    "/.netlify/functions/sendMail",
+                    JSON.stringify(values)
+                  )
+                  .then((response) => {
+                    if (response.status === 200) {
+                      setStatus(true);
+                      resetForm();
+                    }
+                  });
+              } catch (error) {
+                console.log(error);
+              }
             }, 400);
           }}>
           {({ isSubmitting, values }) => (
@@ -61,12 +75,14 @@ const Index = () => {
                     <Alert
                       icon={<CheckIcon fontSize="inherit" />}
                       severity="success"
-                      sx={{
+                      sx={(theme) => ({
                         color: "green",
                         backgroundColor: (theme) =>
                           theme.palette.info[500],
-                        width: "50%",
-                      }}>
+                        [theme.breakpoints.up("md")]: {
+                          width: "50%",
+                        },
+                      })}>
                       The form has been sent. We will get back to you
                       shortly.
                     </Alert>
