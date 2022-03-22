@@ -90,9 +90,9 @@ const Hero = () => {
                 width: "95%",
               },
             })}>
-            With years of experience in trucking and freight industry,
-            we have how to make your freight transportation mechanism
-            easier.
+            We are your one stop shop where you can fing the highest
+            paing loads, shippers pregerred lanes, fuel cards, eld
+            compliance dash cameras and more.
           </Typography>
           <Typography
             variant="h6"

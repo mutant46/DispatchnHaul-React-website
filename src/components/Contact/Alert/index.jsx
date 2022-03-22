@@ -23,7 +23,7 @@ const Index = ({ status }) => {
       })}>
       {status
         ? "Your message was sent successfully!"
-        : "Error sending email"}
+        : "Error sending email, please try again."}
     </Alert>
   );
 };

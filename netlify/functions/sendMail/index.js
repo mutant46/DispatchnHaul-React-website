@@ -7,6 +7,15 @@ exports.handler = async function (event, context) {
     event.body
   );
 
+  if (!firstName || !lastName || !contactNumber || !mcNumber) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        message: "Missing required fields",
+      }),
+    };
+  }
+
   const transporter = nodemailer.createTransport({
     host: "smtp.mail.yahoo.com",
     service: "yahoo",
@@ -27,12 +36,10 @@ exports.handler = async function (event, context) {
     .sendMail(mailOptions)
     .then(() => ({
       statusCode: 200,
-      body: JSON.stringify({
-        msg: "Your message was sent successfully!",
-      }),
+      body: JSON.stringify({ msg: "email sent" }),
     }))
     .catch((error) => ({
       statusCode: 422,
-      body: JSON.stringify({ msg: "Error sending email" }),
+      body: JSON.stringify({ msg: error }),
     }));
 };

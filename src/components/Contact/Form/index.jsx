@@ -66,15 +66,16 @@ const Index = () => {
                   )
                   .then((response) => {
                     if (response.status === 200) {
-                      setShowAlert(true);
                       setStatus(true);
-                      setSubmitting(false);
                       resetForm();
                     }
                   });
               } catch (error) {
                 setStatus(false);
                 console.log(error);
+              } finally {
+                setShowAlert(true);
+                setSubmitting(false);
               }
             }, 400);
           }}>
