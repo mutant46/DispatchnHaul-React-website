@@ -3,9 +3,7 @@ require("dotenv").config();
 
 const { FROM_USER, FROM_USER_PASSWORD, TO_USER } = process.env;
 exports.handler = async function (event, context) {
-  const { firstName, lastName, contactNumber, mcNumber } = JSON.parse(
-    event.body
-  );
+  const { firstName, lastName, contactNumber, mcNumber } = JSON.parse(event.body);
 
   if (!firstName || !lastName || !contactNumber || !mcNumber) {
     return {

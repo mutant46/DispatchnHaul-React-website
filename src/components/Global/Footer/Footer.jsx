@@ -145,7 +145,7 @@ const Footer = () => {
             spacing={4}>
             <Grid item xs={12} sm={6}>
               <StyleTypography>
-                Copyright © 2022 DispatchnHaul.
+                Copyright © 2022 Dispatch n Haul.
               </StyleTypography>
             </Grid>
             <Grid item xs={12} sm={6}>

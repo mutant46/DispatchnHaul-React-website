@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home";
 import Sevices from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import Pricing from "./pages/Pricing/Pricing";
+import Error from "./pages/404";
 // material-ui
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -46,6 +47,7 @@ const App = () => {
           <Route exact path="/services" render={() => <Sevices />} />
           <Route exact path="/pricing" render={() => <Pricing />} />
           <Route exact path="/contact" render={() => <Contact />} />
+          <Route render={() => <Error />} />
         </Switch>
         <Footer />
       </main>
