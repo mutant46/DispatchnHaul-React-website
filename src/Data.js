@@ -36,7 +36,7 @@ export const pages = [
 export const usp = [
   {
     title: "Professional",
-    desc: "We have professional dispatcher with 5 to 8 years of experience that can make you worth hauling in secondsnience.",
+    desc: "We have professional dispatchers with 5 to 8 years of experience that can make you worth hauling in a second science.",
     icon: <WorkIcon />,
   },
   {
@@ -46,12 +46,12 @@ export const usp = [
   },
   {
     title: "Reliable",
-    desc: "We find loads from reliable sources like DAT load Boards, 123 Load Boards and many other reference.",
+    desc: "We find loads from reliable sources like DAT load Boards, 123 Load Boards, and many other references.",
     icon: <HdrStrongIcon />,
   },
   {
     title: "Flexible Plans",
-    desc: "We provide flexible means for payment through bank, comcheck, paypal or all type of credit and debit cards.",
+    desc: "We provide flexible means for payment through the banks, com check, PayPal, or all types of credit and debit cards.",
     icon: <LocalOfferIcon />,
   },
 ];

@@ -17,7 +17,10 @@ const Index = () => {
           width: "70%",
           mx: "auto",
           [theme.breakpoints.up("md")]: {
-            width: "50%",
+            width: "45%",
+          },
+          [theme.breakpoints.up("xl")]: {
+            width: "40%",
           },
         })}>
         <Box
@@ -32,7 +35,7 @@ const Index = () => {
         component="p"
         color="white"
         sx={{ textAlign: "center", fontWeight: "light", fontFamily: "Abel" }}>
-        Whoooops! Page Not Found!!!!
+        ....Oops! Page Not Found.
       </Typography>
       <PrimaryButton
         sx={{ display: "block", mx: "auto", mt: 2 }}

@@ -1,10 +1,6 @@
 import React from "react";
 // local components
-import {
-  MarginLine,
-  PTypography,
-  PrimaryHeading,
-} from "../../Reusable/Reusable";
+import { MarginLine, PTypography, PrimaryHeading } from "../../Reusable/Reusable";
 import Spacing from "../../Global/spacing/Sapcing";
 
 // material ui
@@ -46,12 +42,11 @@ const Info = () => {
               Get In Touch
             </PrimaryHeading>
             <PTypography component="p" pr={2}>
-              With years of experience in trucking and freight
-              industry, we have learned how to negotiate the best
-              rates and how to make your freight transportation
-              mechanism easier. Furthermore, our experienced staff
-              provides driver communication, load consolidation, and
-              24/7 customer service and any other assistance required
+              With years of experience in trucking and freight industry, we have
+              learned how to negotiate the best rates and how to make your freight
+              transportation mechanism easier. Furthermore, our experienced staff
+              provides driver communication, load consolidation, 24/7 customer
+              service and any other assistance required.
             </PTypography>
           </Grid>
           <Grid item md={6} />
@@ -69,8 +64,7 @@ const Info = () => {
               <StyledPhoneIcon />
             </StyledAvatar>
             <PTypography component="p">
-              Do you need help right now? Contact our customer service
-              via chat
+              Do you need help right now? Contact our customer service.
             </PTypography>
             <br />
             <Link href="tel:7327247721">732-724-7721</Link>
@@ -92,13 +86,10 @@ const Info = () => {
               <StyledMailIcon />
             </StyledAvatar>
             <PTypography component="p">
-              Do you have a question? We can help you through our
-              email channel.
+              Do you have a question? We can help you through our email channel.
             </PTypography>
             <br />
-            <Link
-              href="mailto:Dispatch@dispatchnhaul.com"
-              color="primary">
+            <Link href="mailto:Dispatch@dispatchnhaul.com" color="primary">
               Dispatch@dispatchnhaul.com
             </Link>
           </Grid>

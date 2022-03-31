@@ -42,14 +42,13 @@ const About = () => {
               ABOUT US
             </PrimaryHeading>
             <PTypography component="p">
-              We are the leader of the logistics industry with
-              cutting-edge tracking technology for safe pickup and
-              delivery and skilled staff serving the continental U.S.
-              & North America.
+              We are the leader in the logistics industry with cutting-edge tracking
+              technology for safe pickup or delivery and skilled staff serving the
+              continental U.S. & North America.
             </PTypography>
             <PTypography component="p">
-              5000+ carrier database, daily carrier compliance and
-              fraud monitoring, as well as quick pay and fuel advance.
+              5000+ carrier database, daily carrier compliance and fraud monitoring,
+              as well as quick pay and fuel advance.
             </PTypography>
             <PrimaryButton
               variant="contained"
@@ -71,9 +70,7 @@ const About = () => {
             <Box
               component="img"
               alt="about truck dispatch"
-              src={
-                isMobile ? "images/about-3.jpg" : "images/about-2.jpg"
-              }
+              src={isMobile ? "images/about-3.jpg" : "images/about-2.jpg"}
               sx={(theme) => ({
                 borderRadius: "20px",
                 height: "100%",

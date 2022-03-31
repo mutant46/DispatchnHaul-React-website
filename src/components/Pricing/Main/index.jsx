@@ -81,25 +81,20 @@ const Index = () => {
             spacing={2}
             sx={{ color: (theme) => theme.palette.info.main }}>
             <Grid item xs={12} md={6}>
-              <PrimaryHeading
-                variant="h3"
-                component="h1"
-                color="white">
+              <PrimaryHeading variant="h3" component="h1" color="white">
                 Truck Dispatch Services Pricing
               </PrimaryHeading>
               <PTypography component="p" pr={2}>
-                There are no agreements in place. We understand how
-                tough it is to make money, which is why we only charge
-                a small percentage fee for any load we locate. This is
-                the industry's lowest service fee.
+                There are no agreements in place. We understand how tough it is to
+                make money, which is why we only charge a small percentage fee for
+                any load we locate. This is the industry's lowest service fee.
               </PTypography>
             </Grid>
             <Grid item xs={12} md={6}></Grid>
             <Grid item xs={12} md={4} mt={2}>
               <StyledBox
                 sx={{
-                  backgroundColor: (theme) =>
-                    theme.palette.secondary.main,
+                  backgroundColor: (theme) => theme.palette.secondary.main,
                   border: "1px solid rgba(255,255,255,0.5)",
                   color: (theme) => theme.palette.info.main,
                 }}>
@@ -118,8 +113,7 @@ const Index = () => {
                     borderRadius: "20px",
                     "&:hover": {
                       border: "0px",
-                      backgroundColor: (theme) =>
-                        theme.palette.info.main,
+                      backgroundColor: (theme) => theme.palette.info.main,
                       color: "black",
                     },
                     padding: (theme) => theme.spacing(1, 5),
@@ -147,8 +141,7 @@ const Index = () => {
                       <StyledChip
                         label="Recommended"
                         sx={{
-                          backgroundColor: (theme) =>
-                            theme.palette.primary.main,
+                          backgroundColor: (theme) => theme.palette.primary.main,
                           color: "white",
                         }}
                       />
@@ -200,8 +193,7 @@ const Index = () => {
                         backgroundColor: "black",
                         borderRadius: "20px",
                         "&:hover": {
-                          backgroundColor: (theme) =>
-                            theme.palette.primary.main,
+                          backgroundColor: (theme) => theme.palette.primary.main,
                         },
 
                         padding: (theme) => theme.spacing(1, 5),
@@ -241,28 +233,23 @@ const Index = () => {
                   paddingRight: (theme) => theme.spacing(2),
                 },
               })}>
-              <PrimaryHeading
-                variant="h3"
-                component="h2"
-                color="white">
+              <PrimaryHeading variant="h3" component="h2" color="white">
                 Your Dedicated Truck Dispatcher
               </PrimaryHeading>
               <PTypography component="p">
-                <b>Dispatch n Haul</b> deals with all kinds of turck
-                i.e. Reefer, PowerOnly, boxtruck Step Deck  and takes
-                care of all the back-office tasks so you can compete
-                with the big fleets. Normally, a large carrier would
-                engage someone to undertake all of these activities,
-                but for a small carrier, this is prohibitive. That's
-                when <b>Dispatch n Haul</b> comes in to help!
+                <b>Dispatch n Haul</b> deals with all kinds of truck i.e. Reefer,
+                PowerOnly, box truck Step Deck and takes care of all the back-office
+                tasks so you can compete with the big fleets. Normally, a large
+                carrier would engage someone to undertake all of these activities,
+                but for a small carrier, this is prohibitive. That's when
+                <b> Dispatch n Haul</b> comes in to help!
               </PTypography>
               <PTypography component="p">
-                Our procedure is straightforward, your professional
-                truck dispatcher will follow your instructions. Our
-                freight dispatchers work with you to build the ideal
-                lanes that meet your chosen schedule, whether you want
-                to be home every night, every other night, or once
-                every two weeks.
+                Our procedure is straightforward, your professional truck dispatcher
+                will follow your instructions. Our freight dispatchers work with you
+                to build the ideal lanes that meet your chosen schedule, whether you
+                want to be home every night, every other night, or once every two
+                weeks.
               </PTypography>
               <PrimaryButton
                 variant="contained"

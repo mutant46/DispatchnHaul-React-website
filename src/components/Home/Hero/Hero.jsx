@@ -90,9 +90,9 @@ const Hero = () => {
                 width: "95%",
               },
             })}>
-            We are your one stop shop where you can fing the highest
-            paing loads, shippers pregerred lanes, fuel cards, eld
-            compliance dash cameras and more.
+            We are your one-stop-shop where you can find the highest paying loads,
+            shippers preferred lanes, fuel cards, eld compliance dash cameras and
+            more.
           </Typography>
           <Typography
             variant="h6"
