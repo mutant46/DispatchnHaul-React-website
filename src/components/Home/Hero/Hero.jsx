@@ -73,26 +73,28 @@ const Hero = () => {
             color="white"
             sx={(theme) => ({
               [theme.breakpoints.down("md")]: {
-                fontSize: "2.5rem",
+                fontSize: "2.25rem",
               },
             })}>
             We are the best company for your dispatch needs.
           </Typography>
           <Typography
             variant="h6"
+            component="p"
             color="white"
             sx={(theme) => ({
               fontWeight: "light",
               width: "72%",
+              fontSize: "1.15rem",
               mt: theme.spacing(2),
               [theme.breakpoints.down("md")]: {
-                fontSize: "1rem",
+                fontSize: "0.95rem",
                 width: "95%",
               },
             })}>
-            We are your one-stop-shop where you can find the highest paying loads,
-            shippers preferred lanes, fuel cards, eld compliance dash cameras and
-            more.
+            We are your one-stop-shop where you can find the highest paying Premium
+            Loads, Shippers Preferred Lanes, Fuel Cards, ELD Compliance, Smart
+            Dash-Cameras, Asset/Trailer Tracking Devices and much more.
           </Typography>
           <Typography
             variant="h6"

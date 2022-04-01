@@ -16,9 +16,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 // react router
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const { pathname } = useLocation();
   const isMobile = useMediaQuery("(max-width:768px)");
   const [isOpen, setIsOpen] = React.useState(false);
   const histroy = useHistory();
@@ -50,10 +51,10 @@ const Header = () => {
                   onClick={() => HandlePageClick(pageURL)}
                   sx={{
                     mb: "2em",
+                    color: (theme) =>
+                      pathname === pageURL ? theme.palette.primary.main : "",
                   }}>
-                  <ListItemIcon sx={{ color: "white" }}>
-                    {icon}
-                  </ListItemIcon>
+                  <ListItemIcon sx={{ color: "inherit" }}>{icon}</ListItemIcon>
                   <ListItemText primary={title} />
                 </ListItem>
               );
@@ -102,6 +103,8 @@ const Header = () => {
                       component="div"
                       sx={(theme) => ({
                         ml: 7,
+                        color:
+                          pathname === pageURL ? [theme.palette.primary.main] : "",
                         cursor: "pointer",
                         letterSpacing: "1px",
                         "&:hover": {
