@@ -51,7 +51,7 @@ export const usp = [
   },
   {
     title: "Flexible Plans",
-    desc: "We provide flexible means for payment through the banks, com check, PayPal, or all types of credit and debit cards.",
+    desc: "We provide flexible means for payment through the banks, com check, PayPal, Zelle Pay,  or all types of credit and debit cards.",
     icon: <LocalOfferIcon />,
   },
 ];
@@ -67,7 +67,7 @@ export const services = [
   "Request Fuel Advances",
   "24/7/365 – Dispatch Assistance",
   "Credit Checks",
-  "Collection Assistance",
+  "Detention, TONU, Lumper assistance",
   "Dedicated Personal Dispatcher",
   "Setup Paperwork",
   "Factor Setup Assistance",

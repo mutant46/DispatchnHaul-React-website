@@ -49,13 +49,15 @@ const Index = () => {
         sx={(theme) => ({
           backgroundImage: "url('images/pricing-1.jpeg')",
           backgroundAttachment: "fixed",
-        })}>
+        })}
+      >
         <BgOverlay />
         <BgAntiOverlay
           sx={{
             textAlign: "center",
             textShadow: "1px 1px 5px black",
-          }}>
+          }}
+        >
           <Typography
             color="white"
             variant="h2"
@@ -66,7 +68,8 @@ const Index = () => {
               [theme.breakpoints.down("sm")]: {
                 fontSize: "2.5rem",
               },
-            })}>
+            })}
+          >
             OUR PACKAGES
           </Typography>
           <Typography color="white" variant="body" letterSpacing={1}>
@@ -76,18 +79,15 @@ const Index = () => {
       </BgHero>
       <Spacing>
         <MarginLine>
-          <Grid
-            container
-            spacing={2}
-            sx={{ color: (theme) => theme.palette.info.main }}>
+          <Grid container spacing={2} sx={{ color: (theme) => theme.palette.info.main }}>
             <Grid item xs={12} md={6}>
               <PrimaryHeading variant="h3" component="h1" color="white">
                 Truck Dispatch Services Pricing
               </PrimaryHeading>
               <PTypography component="p" pr={2}>
-                There are no agreements in place. We understand how tough it is to
-                make money, which is why we only charge a small percentage fee for
-                any load we locate. This is the industry's lowest service fee.
+                There are no agreements in place. We understand how tough it is to make
+                money, which is why we only charge a small percentage fee for any load we
+                locate. This is the industry's lowest service fee.
               </PTypography>
             </Grid>
             <Grid item xs={12} md={6}></Grid>
@@ -97,7 +97,8 @@ const Index = () => {
                   backgroundColor: (theme) => theme.palette.secondary.main,
                   border: "1px solid rgba(255,255,255,0.5)",
                   color: (theme) => theme.palette.info.main,
-                }}>
+                }}
+              >
                 <StyledTitle variant="h5">Custom</StyledTitle>
                 <br />
                 <Typography variant="h6" sx={{}} mb={3}>
@@ -118,7 +119,8 @@ const Index = () => {
                     },
                     padding: (theme) => theme.spacing(1, 5),
                   }}
-                  variant="outlined">
+                  variant="outlined"
+                >
                   Contact
                 </Button>
               </StyledBox>
@@ -135,7 +137,8 @@ const Index = () => {
                   key={index}
                   sx={{
                     color: "black",
-                  }}>
+                  }}
+                >
                   <StyledBox>
                     {papular ? (
                       <StyledChip
@@ -155,26 +158,30 @@ const Index = () => {
                       sx={{
                         fontWeight: "bolder",
                         textShadow: "1px 1px 5px rgba(0,0,0,0.4)",
-                      }}>
+                      }}
+                    >
                       ${price}{" "}
                       <span
                         style={{
                           fontSize: "12px",
-                        }}>
+                        }}
+                      >
                         per truck
                       </span>
                     </Typography>
                     <List
                       sx={{
                         padding: "30px 0px",
-                      }}>
+                      }}
+                    >
                       {points.map((point, index) => {
                         return (
                           <ListItem
                             key={index}
                             sx={{
                               padding: "2px 0px",
-                            }}>
+                            }}
+                          >
                             <CheckCircleIcon
                               color="primary"
                               sx={{ marginRight: "10px" }}
@@ -198,7 +205,8 @@ const Index = () => {
 
                         padding: (theme) => theme.spacing(1, 5),
                       }}
-                      variant="outlined">
+                      variant="outlined"
+                    >
                       Contact
                     </Button>
                   </StyledBox>
@@ -232,30 +240,31 @@ const Index = () => {
                 [theme.breakpoints.down("md")]: {
                   paddingRight: (theme) => theme.spacing(2),
                 },
-              })}>
+              })}
+            >
               <PrimaryHeading variant="h3" component="h2" color="white">
                 Your Dedicated Truck Dispatcher
               </PrimaryHeading>
               <PTypography component="p">
-                <b>Dispatch n Haul</b> deals with all kinds of truck i.e. Reefer,
-                PowerOnly, box truck Step Deck and takes care of all the back-office
-                tasks so you can compete with the big fleets. Normally, a large
-                carrier would engage someone to undertake all of these activities,
-                but for a small carrier, this is prohibitive. That's when
+                <b>Dispatch n Haul</b> deals with all kinds of truck i.e. Step Deck,
+                Reefer, Dry Van, Flatbed, PowerOnly, Box Truck, Hotshot and takes care of
+                all the back-office tasks so you can compete with the big fleets.
+                Normally, a large carrier would engage someone to undertake all of these
+                activities, but for a small carrier, this is prohibitive. That's when
                 <b> Dispatch n Haul</b> comes in to help!
               </PTypography>
               <PTypography component="p">
-                Our procedure is straightforward, your professional truck dispatcher
-                will follow your instructions. Our freight dispatchers work with you
-                to build the ideal lanes that meet your chosen schedule, whether you
-                want to be home every night, every other night, or once every two
-                weeks.
+                Our procedure is straightforward, your professional truck dispatcher will
+                follow your instructions. Our freight dispatchers work with you to build
+                the ideal lanes that meet your chosen schedule, whether you want to be
+                home every night, every other night, or once every two weeks.
               </PTypography>
               <PrimaryButton
                 variant="contained"
                 onClick={() => {
                   history.push("/contact");
-                }}>
+                }}
+              >
                 Contact
               </PrimaryButton>
             </Grid>
