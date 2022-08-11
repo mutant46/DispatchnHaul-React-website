@@ -56,7 +56,8 @@ const Footer = () => {
     <Box
       sx={(theme) => ({
         borderTop:
-          "1px solid " + alpha(theme.palette.primary.main, 0.8),
+          "1px solid " +
+          alpha(theme.palette.primary.main, 0.8),
         borderTopRightRadius: 40,
         borderTopLeftRadius: 40,
         backgroundColor: "black",
@@ -65,29 +66,39 @@ const Footer = () => {
         [theme.breakpoints.down("sm")]: {
           marginTop: (theme) => [theme.spacing(8)],
         },
-      })}>
+      })}
+    >
       <Cta />
       <Spacing>
         <Box
           sx={(theme) => ({
             paddingTop: [theme.spacing(7)],
-          })}>
+          })}
+        >
           <Logo />
           <Grid
             container
             spacing={2}
             sx={{
-              padding: (theme) => [theme.spacing(5, 0, 0, 0)],
-            }}>
+              padding: (theme) => [
+                theme.spacing(5, 0, 0, 0),
+              ],
+            }}
+          >
             <Grid item xs={12} sm={6} md={4}>
-              <StyleTypography variant="h6">COMPANY</StyleTypography>
+              <StyleTypography variant="h6">
+                COMPANY
+              </StyleTypography>
               <List dense={true}>
                 {pages.map((page) => {
                   const { title, pageURL, id } = page;
                   return (
                     <StyledListItem
                       key={id}
-                      onClick={() => HandlePageClick(pageURL)}>
+                      onClick={() =>
+                        HandlePageClick(pageURL)
+                      }
+                    >
                       <ListItemText primary={title} />
                     </StyledListItem>
                   );
@@ -95,21 +106,27 @@ const Footer = () => {
               </List>
             </Grid>
             <Grid item sm={12} md={8}>
-              <StyleTypography variant="h6">CONTACT</StyleTypography>
+              <StyleTypography variant="h6">
+                CONTACT
+              </StyleTypography>
               <List
                 sx={{
                   display: "flex",
                   flexWrap: "wrap",
-                }}>
-                <StyledListItem sx={{ marginBottom: "0em" }}>
+                }}
+              >
+                <StyledListItem
+                  sx={{ marginBottom: "0em" }}
+                >
                   <MailIcon />
                   <Link
-                    href="mailto:Dispatch@dispatchnhaul.com"
+                    href="mailto:dispatchnhaul@gmail.com"
                     ml={1}
                     underline="none"
                     sx={{ letterSpacing: "1px" }}
-                    color="inherit">
-                    Dispatch@dispatchnhaul.com
+                    color="inherit"
+                  >
+                    dispatchnhaul@gmail.com
                   </Link>
                 </StyledListItem>
                 <StyledListItem
@@ -118,15 +135,17 @@ const Footer = () => {
                     [theme.breakpoints.up("md")]: {
                       marginLeft: [theme.spacing(12)],
                     },
-                  })}>
+                  })}
+                >
                   <LocalPhoneIcon />
                   <Link
-                    href="tel:7327247721"
+                    href="tel:2166002101"
                     ml={1}
                     underline="none"
                     sx={{ letterSpacing: "1px" }}
-                    color="inherit">
-                    732-724-7721
+                    color="inherit"
+                  >
+                    216-600-2101
                   </Link>
                 </StyledListItem>
               </List>
@@ -142,7 +161,8 @@ const Footer = () => {
           <Grid
             container
             sx={{ padding: (theme) => theme.spacing(4, 0) }}
-            spacing={4}>
+            spacing={4}
+          >
             <Grid item xs={12} sm={6}>
               <StyleTypography>
                 Copyright © 2022 Dispatch n Haul.
@@ -152,7 +172,8 @@ const Footer = () => {
               <Stack
                 direction={isMobile ? "row" : "row-reverse"}
                 spacing={isMobile ? 3 : 4}
-                color="white">
+                color="white"
+              >
                 <FacebookIcon />
                 <LinkedInIcon />
                 <TwitterIcon />
