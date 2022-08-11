@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import { Box } from "@mui/material";
 
 const NavbarBrand = ({ history }) => {
   return (
@@ -10,30 +10,19 @@ const NavbarBrand = ({ history }) => {
           alignItems: "center",
           cursor: "pointer",
         }}
-        onClick={() => history.push("/")}>
+        onClick={() => history.push("/")}
+      >
         <Box
           component="img"
-          width="45px"
+          width="250px"
           alt="DispathnHaul logo"
-          src="logo.svg"
+          src="images/logo.png"
           sx={(theme) => ({
             [theme.breakpoints.down("md")]: {
-              width: "35px",
+              width: "180px",
             },
           })}
         />
-        <Typography
-          variant="h6"
-          component="div"
-          sx={{
-            ml: 1,
-            fontFamily: "Abel",
-            cursor: "pointer",
-            letterSpacing: "1px",
-            color: "white",
-          }}>
-          Dispatch n Haul
-        </Typography>
       </Box>
     </>
   );
