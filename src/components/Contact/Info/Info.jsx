@@ -1,10 +1,6 @@
 import React from "react";
 // local components
-import {
-  MarginLine,
-  PTypography,
-  PrimaryHeading,
-} from "../../Reusable/Reusable";
+import { MarginLine, PTypography, PrimaryHeading } from "../../Reusable/Reusable";
 import Spacing from "../../Global/spacing/Sapcing";
 
 // material ui
@@ -27,12 +23,10 @@ const StyledMailIcon = styled(MailIcon)(({ theme }) => ({
   color: theme.palette.primary.main,
   fontSize: "2rem",
 }));
-const StyledPhoneIcon = styled(LocalPhoneIcon)(
-  ({ theme }) => ({
-    color: theme.palette.primary.main,
-    fontSize: "2rem",
-  })
-);
+const StyledPhoneIcon = styled(LocalPhoneIcon)(({ theme }) => ({
+  color: theme.palette.primary.main,
+  fontSize: "2rem",
+}));
 
 const Info = () => {
   return (
@@ -51,14 +45,9 @@ const Info = () => {
               Get In Touch
             </PrimaryHeading>
             <PTypography component="p" pr={2}>
-              With years of experience in trucking and
-              freight industry, we have learned how to
-              negotiate the best rates and how to make your
-              freight transportation mechanism easier.
-              Furthermore, our experienced staff provides
-              driver communication, load consolidation, 24/7
-              customer service and any other assistance
-              required.
+              With years of experience in trucking and freight industry, we have learned how to negotiate the best rates
+              and how to make your freight transportation mechanism easier. Furthermore, our experienced staff provides
+              driver communication, load consolidation, 24/7 customer service and any other assistance required.
             </PTypography>
           </Grid>
           <Grid item md={6} />
@@ -76,12 +65,19 @@ const Info = () => {
             <StyledAvatar>
               <StyledPhoneIcon />
             </StyledAvatar>
-            <PTypography component="p">
-              Do you need help right now? Contact our
-              customer service.
-            </PTypography>
+            <PTypography component="p">Do you need help right now? Contact our customer service.</PTypography>
             <br />
-            <Link href="tel:2166002101">216-600-2101</Link>
+            <Link
+              href="tel:3073171127"
+              sx={(theme) => ({
+                color: theme.palette.primary,
+                fontWeight: "bold",
+                textShadow: "0.25px 0.25px 0px #05c2c8",
+                letterSpacing: 0.75,
+              })}
+            >
+              307-317-1127
+            </Link>
           </Grid>
           <Grid
             item
@@ -100,14 +96,17 @@ const Info = () => {
             <StyledAvatar>
               <StyledMailIcon />
             </StyledAvatar>
-            <PTypography component="p">
-              Do you have a question? We can help you
-              through our email channel.
-            </PTypography>
+            <PTypography component="p">Do you have a question? We can help you through our email channel.</PTypography>
             <br />
             <Link
               href="mailto:dispatchnhaul@gmail.com"
               color="primary"
+              sx={(theme) => ({
+                color: theme.palette.primary,
+                fontWeight: "bold",
+                textShadow: "0.25px 0.25px 0px #05c2c8",
+                letterSpacing: 0.75,
+              })}
             >
               dispatchnhaul@gmail.com
             </Link>

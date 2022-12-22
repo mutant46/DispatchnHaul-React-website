@@ -3,16 +3,10 @@ import { Alert } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 
-const Index = ({ status }) => {
+const Index = ({ status, onIconClick }) => {
   return (
     <Alert
-      icon={
-        status ? (
-          <CheckIcon fontSize="inherit" />
-        ) : (
-          <CloseIcon fontSize="inherit" />
-        )
-      }
+      icon={status ? <CheckIcon fontSize="inherit" /> : <CloseIcon fontSize="inherit" onClick={onIconClick} />}
       severity={status ? "success" : "error"}
       sx={(theme) => ({
         color: status ? "green" : "red",
@@ -20,10 +14,9 @@ const Index = ({ status }) => {
         [theme.breakpoints.up("md")]: {
           width: "50%",
         },
-      })}>
-      {status
-        ? "Your message was sent successfully!"
-        : "Error sending email, please try again."}
+      })}
+    >
+      {status ? "Your message was sent successfully!" : "Error sending email, please try again."}
     </Alert>
   );
 };

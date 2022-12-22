@@ -5,17 +5,7 @@ import Cta from "../Cta/Cta";
 import Logo from "../logo/logo";
 import { pages } from "../../../Data";
 // material ui
-import {
-  Box,
-  Typography,
-  Grid,
-  List,
-  ListItem,
-  ListItemText,
-  Divider,
-  Link,
-  Stack,
-} from "@mui/material";
+import { Box, Typography, Grid, List, ListItem, ListItemText, Divider, Link, Stack } from "@mui/material";
 import { alpha, styled } from "@mui/material/styles";
 import MailIcon from "@mui/icons-material/Mail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
@@ -55,9 +45,7 @@ const Footer = () => {
   return (
     <Box
       sx={(theme) => ({
-        borderTop:
-          "1px solid " +
-          alpha(theme.palette.primary.main, 0.8),
+        borderTop: "1px solid " + alpha(theme.palette.primary.main, 0.8),
         borderTopRightRadius: 40,
         borderTopLeftRadius: 40,
         backgroundColor: "black",
@@ -80,25 +68,16 @@ const Footer = () => {
             container
             spacing={2}
             sx={{
-              padding: (theme) => [
-                theme.spacing(5, 0, 0, 0),
-              ],
+              padding: (theme) => [theme.spacing(5, 0, 0, 0)],
             }}
           >
             <Grid item xs={12} sm={6} md={4}>
-              <StyleTypography variant="h6">
-                COMPANY
-              </StyleTypography>
+              <StyleTypography variant="h6">COMPANY</StyleTypography>
               <List dense={true}>
                 {pages.map((page) => {
                   const { title, pageURL, id } = page;
                   return (
-                    <StyledListItem
-                      key={id}
-                      onClick={() =>
-                        HandlePageClick(pageURL)
-                      }
-                    >
+                    <StyledListItem key={id} onClick={() => HandlePageClick(pageURL)}>
                       <ListItemText primary={title} />
                     </StyledListItem>
                   );
@@ -106,18 +85,14 @@ const Footer = () => {
               </List>
             </Grid>
             <Grid item sm={12} md={8}>
-              <StyleTypography variant="h6">
-                CONTACT
-              </StyleTypography>
+              <StyleTypography variant="h6">CONTACT</StyleTypography>
               <List
                 sx={{
                   display: "flex",
                   flexWrap: "wrap",
                 }}
               >
-                <StyledListItem
-                  sx={{ marginBottom: "0em" }}
-                >
+                <StyledListItem sx={{ marginBottom: "0em" }}>
                   <MailIcon />
                   <Link
                     href="mailto:dispatchnhaul@gmail.com"
@@ -138,14 +113,8 @@ const Footer = () => {
                   })}
                 >
                   <LocalPhoneIcon />
-                  <Link
-                    href="tel:2166002101"
-                    ml={1}
-                    underline="none"
-                    sx={{ letterSpacing: "1px" }}
-                    color="inherit"
-                  >
-                    216-600-2101
+                  <Link href="tel:3073171127" ml={1} underline="none" sx={{ letterSpacing: "1px" }} color="inherit">
+                    307-317-1127
                   </Link>
                 </StyledListItem>
               </List>
@@ -158,22 +127,12 @@ const Footer = () => {
             })}
           />
 
-          <Grid
-            container
-            sx={{ padding: (theme) => theme.spacing(4, 0) }}
-            spacing={4}
-          >
+          <Grid container sx={{ padding: (theme) => theme.spacing(4, 0) }} spacing={4}>
             <Grid item xs={12} sm={6}>
-              <StyleTypography>
-                Copyright © 2022 Dispatch n Haul.
-              </StyleTypography>
+              <StyleTypography>Copyright © 2022 Dispatch n Haul.</StyleTypography>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Stack
-                direction={isMobile ? "row" : "row-reverse"}
-                spacing={isMobile ? 3 : 4}
-                color="white"
-              >
+              <Stack direction={isMobile ? "row" : "row-reverse"} spacing={isMobile ? 3 : 4} color="white">
                 <FacebookIcon />
                 <LinkedInIcon />
                 <TwitterIcon />
