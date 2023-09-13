@@ -1,6 +1,10 @@
 import React from "react";
 // local components
-import { MarginLine, PTypography, PrimaryHeading } from "../../Reusable/Reusable";
+import {
+  MarginLine,
+  PTypography,
+  PrimaryHeading,
+} from "../../Reusable/Reusable";
 import Spacing from "../../Global/spacing/Sapcing";
 
 // material ui
@@ -45,9 +49,12 @@ const Info = () => {
               Get In Touch
             </PrimaryHeading>
             <PTypography component="p" pr={2}>
-              With years of experience in trucking and freight industry, we have learned how to negotiate the best rates
-              and how to make your freight transportation mechanism easier. Furthermore, our experienced staff provides
-              driver communication, load consolidation, 24/7 customer service and any other assistance required.
+              With years of experience in trucking and freight industry, we have
+              learned how to negotiate the best rates and how to make your
+              freight transportation mechanism easier. Furthermore, our
+              experienced staff provides driver communication, load
+              consolidation, 24/7 customer service and any other assistance
+              required.
             </PTypography>
           </Grid>
           <Grid item md={6} />
@@ -65,7 +72,9 @@ const Info = () => {
             <StyledAvatar>
               <StyledPhoneIcon />
             </StyledAvatar>
-            <PTypography component="p">Do you need help right now? Contact our customer service.</PTypography>
+            <PTypography component="p">
+              Do you need help right now? Contact our customer service.
+            </PTypography>
             <br />
             <Link
               href="tel:3073171127"
@@ -76,7 +85,19 @@ const Info = () => {
                 letterSpacing: 0.75,
               })}
             >
-              307-317-1127
+              (307) 317-1127
+            </Link>
+            <br />
+            <Link
+              href="tel:7372010071"
+              sx={(theme) => ({
+                color: theme.palette.primary,
+                fontWeight: "bold",
+                textShadow: "0.25px 0.25px 0px #05c2c8",
+                letterSpacing: 0.75,
+              })}
+            >
+              (737) 201-0071
             </Link>
           </Grid>
           <Grid
@@ -96,7 +117,9 @@ const Info = () => {
             <StyledAvatar>
               <StyledMailIcon />
             </StyledAvatar>
-            <PTypography component="p">Do you have a question? We can help you through our email channel.</PTypography>
+            <PTypography component="p">
+              Do you have a question? We can help you through our email channel.
+            </PTypography>
             <br />
             <Link
               href="mailto:dispatchnhaul@gmail.com"
@@ -109,6 +132,19 @@ const Info = () => {
               })}
             >
               dispatchnhaul@gmail.com
+            </Link>
+            <br />
+            <Link
+              href="mailto:dnh@dispatchnhaul.com"
+              color="primary"
+              sx={(theme) => ({
+                color: theme.palette.primary,
+                fontWeight: "bold",
+                textShadow: "0.25px 0.25px 0px #05c2c8",
+                letterSpacing: 0.75,
+              })}
+            >
+              dnh@dispatchnhaul.com
             </Link>
           </Grid>
         </Grid>

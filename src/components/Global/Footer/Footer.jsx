@@ -5,7 +5,17 @@ import Cta from "../Cta/Cta";
 import Logo from "../logo/logo";
 import { pages } from "../../../Data";
 // material ui
-import { Box, Typography, Grid, List, ListItem, ListItemText, Divider, Link, Stack } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+  Link,
+  Stack,
+} from "@mui/material";
 import { alpha, styled } from "@mui/material/styles";
 import MailIcon from "@mui/icons-material/Mail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
@@ -77,22 +87,56 @@ const Footer = () => {
                 {pages.map((page) => {
                   const { title, pageURL, id } = page;
                   return (
-                    <StyledListItem key={id} onClick={() => HandlePageClick(pageURL)}>
+                    <StyledListItem
+                      key={id}
+                      onClick={() => HandlePageClick(pageURL)}
+                    >
                       <ListItemText primary={title} />
                     </StyledListItem>
                   );
                 })}
               </List>
             </Grid>
-            <Grid item sm={12} md={8}>
+            <Grid item sm={12} md={6}>
               <StyleTypography variant="h6">CONTACT</StyleTypography>
               <List
+                className="footer-list"
                 sx={{
                   display: "flex",
                   flexWrap: "wrap",
+                  background: "",
+                  justifyContent: "start",
                 }}
               >
-                <StyledListItem sx={{ marginBottom: "0em" }}>
+                <StyledListItem
+                  sx={(theme) => ({
+                    marginBottom: "0em",
+                    width: "50%",
+                    [theme.breakpoints.down("sm")]: {
+                      width: "100%",
+                    },
+                  })}
+                >
+                  <MailIcon />
+                  <Link
+                    href="mailto:dnh@dispatchnhaul.com"
+                    ml={1}
+                    underline="none"
+                    sx={{ letterSpacing: "1px" }}
+                    color="inherit"
+                  >
+                    dnh@dispatchnhaul.com
+                  </Link>
+                </StyledListItem>
+                <StyledListItem
+                  sx={(theme) => ({
+                    marginBottom: "0em",
+                    width: "50%",
+                    [theme.breakpoints.down("sm")]: {
+                      width: "100%",
+                    },
+                  })}
+                >
                   <MailIcon />
                   <Link
                     href="mailto:dispatchnhaul@gmail.com"
@@ -106,15 +150,42 @@ const Footer = () => {
                 </StyledListItem>
                 <StyledListItem
                   sx={(theme) => ({
-                    marginBottom: "0",
-                    [theme.breakpoints.up("md")]: {
-                      marginLeft: [theme.spacing(12)],
+                    marginBottom: "0em",
+                    width: "50%",
+                    [theme.breakpoints.down("sm")]: {
+                      width: "100%",
                     },
                   })}
                 >
                   <LocalPhoneIcon />
-                  <Link href="tel:3073171127" ml={1} underline="none" sx={{ letterSpacing: "1px" }} color="inherit">
-                    307-317-1127
+                  <Link
+                    href="tel:3073171127"
+                    ml={1}
+                    underline="none"
+                    sx={{ letterSpacing: "1px" }}
+                    color="inherit"
+                  >
+                    (307) 317-1127
+                  </Link>
+                </StyledListItem>
+                <StyledListItem
+                  sx={(theme) => ({
+                    marginBottom: "0em",
+                    width: "50%",
+                    [theme.breakpoints.down("sm")]: {
+                      width: "100%",
+                    },
+                  })}
+                >
+                  <LocalPhoneIcon />
+                  <Link
+                    href="tel:7372010071"
+                    ml={1}
+                    underline="none"
+                    sx={{ letterSpacing: "1px" }}
+                    color="inherit"
+                  >
+                    (737) 201-0071
                   </Link>
                 </StyledListItem>
               </List>
@@ -127,12 +198,22 @@ const Footer = () => {
             })}
           />
 
-          <Grid container sx={{ padding: (theme) => theme.spacing(4, 0) }} spacing={4}>
+          <Grid
+            container
+            sx={{ padding: (theme) => theme.spacing(4, 0) }}
+            spacing={4}
+          >
             <Grid item xs={12} sm={6}>
-              <StyleTypography>Copyright © 2022 Dispatch n Haul.</StyleTypography>
+              <StyleTypography>
+                Copyright © 2022 Dispatch n Haul.
+              </StyleTypography>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Stack direction={isMobile ? "row" : "row-reverse"} spacing={isMobile ? 3 : 4} color="white">
+              <Stack
+                direction={isMobile ? "row" : "row-reverse"}
+                spacing={isMobile ? 3 : 4}
+                color="white"
+              >
                 <FacebookIcon />
                 <LinkedInIcon />
                 <TwitterIcon />
