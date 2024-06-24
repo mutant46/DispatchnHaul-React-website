@@ -33,6 +33,39 @@ export const pages = [
   },
 ];
 
+export const allPages = [
+  {
+    id: 1,
+    title: "Home",
+    pageURL: "/",
+    icon: <HomeIcon />,
+  },
+  {
+    id: 2,
+    title: "Services",
+    pageURL: "/services",
+    icon: <MiscellaneousServicesIcon />,
+  },
+  {
+    id: 3,
+    title: "Pricing",
+    pageURL: "/pricing",
+    icon: <LocalOfferIcon />,
+  },
+  {
+    id: 4,
+    title: "Contact",
+    pageURL: "/contact",
+    icon: <MailIcon />,
+  },
+  {
+    id: 5,
+    title: "Privacy Policy",
+    pageURL: "/privacy-policy",
+    icon: "",
+  },
+];
+
 export const usp = [
   {
     title: "Professional",

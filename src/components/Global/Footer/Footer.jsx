@@ -3,7 +3,7 @@ import React from "react";
 import Spacing from "../spacing/Sapcing";
 import Cta from "../Cta/Cta";
 import Logo from "../logo/logo";
-import { pages } from "../../../Data";
+import { allPages } from "../../../Data";
 // material ui
 import {
   Box,
@@ -84,7 +84,7 @@ const Footer = () => {
             <Grid item xs={12} sm={6} md={4}>
               <StyleTypography variant="h6">COMPANY</StyleTypography>
               <List dense={true}>
-                {pages.map((page) => {
+                {allPages.map((page) => {
                   const { title, pageURL, id } = page;
                   return (
                     <StyledListItem
