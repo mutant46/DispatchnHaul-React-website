@@ -27,13 +27,16 @@ const PrivacyPolicy = () => {
           or events
         </li>
       </ul>
-      PrivacyPolicy PrivacyPolicy PrivacyPolicy
+
       <p>
         Questions or concerns? Reading this privacy notice will help you
         understand your privacy rights and choices. If you do not agree with our
-        policies and practices, please do not use our Services. If you still
-        have any questions or concerns, please contact us at{" "}
-        <a href="mailto:dnh@dispatchnhaul.com">dnh@dispatchnhaul.com</a>.
+        policies and practices, You can opt-out of it by simply sending us an
+        email at{" "}
+        <a href="mailto:dnh@dispatchnhaul.com">dnh@dispatchnhaul.com</a>{" "}
+        mentioning <b>STOP</b>. If you still have any questions or concerns,
+        please contact us through{" "}
+        <a href="mailto:dnh@dispatchnhaul.com">email</a>.
       </p>
       <h2>SUMMARY OF KEY POINTS</h2>
       <p>
