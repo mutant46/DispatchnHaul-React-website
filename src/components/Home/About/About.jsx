@@ -37,24 +37,30 @@ const About = () => {
                 paddingTop: theme.spacing(5),
                 paddingRight: (theme) => theme.spacing(2),
               },
-            })}>
+            })}
+          >
             <PrimaryHeading variant="h3" color="white">
               ABOUT US
             </PrimaryHeading>
             <PTypography component="p">
-              We are the leader in the logistics industry with cutting-edge tracking
-              technology for safe pickup or delivery and skilled staff serving the
-              continental U.S. & North America.
+              Dispatch n Haul Services was founded in 2020 and the aim was to
+              support the Trucking industry and help empower the industry that
+              is running the economy.
             </PTypography>
             <PTypography component="p">
-              5000+ carrier database, daily carrier compliance and fraud monitoring,
-              as well as quick pay and fuel advance.
+              At Dispatch n Haul Services, we're passionate about helping
+              owner-operators and Fleet Managers to maximize their earning
+              potential and simplify their business operations. We are your
+              one-stop shop for premium US and Canada truck dispatch services,
+              designed to keep you on the road and focused on what you do best –
+              driving
             </PTypography>
             <PrimaryButton
               variant="contained"
               onClick={() => {
                 history.push("/pricing");
-              }}>
+              }}
+            >
               Pricing
             </PrimaryButton>
           </Grid>
@@ -66,7 +72,8 @@ const About = () => {
               [theme.breakpoints.down("md")]: {
                 order: 0,
               },
-            })}>
+            })}
+          >
             <Box
               component="img"
               alt="about truck dispatch"

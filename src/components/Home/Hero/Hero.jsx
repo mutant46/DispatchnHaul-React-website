@@ -17,7 +17,8 @@ const Hero = () => {
         [theme.breakpoints.down("md")]: {
           backgroundPosition: "center",
         },
-      })}>
+      })}
+    >
       <Box
         // background overlay on top of the image
         sx={{
@@ -26,7 +27,8 @@ const Hero = () => {
           height: "100%",
           zIndex: 1,
           backgroundColor: "rgba(0,0,0,0.7)",
-        }}></Box>
+        }}
+      ></Box>
 
       <Grid
         container
@@ -35,7 +37,8 @@ const Hero = () => {
           position: "relative",
           textShadow: "0px 0px 10px #000",
           zIndex: 2,
-        })}>
+        })}
+      >
         <Grid item md={1} sx={{}}></Grid>
         <Grid
           item
@@ -50,7 +53,8 @@ const Hero = () => {
             [theme.breakpoints.down("sm")]: {
               padding: [theme.spacing(0, 4)],
             },
-          })}>
+          })}
+        >
           <Typography
             variant="h6"
             color="primary"
@@ -64,7 +68,8 @@ const Hero = () => {
               [theme.breakpoints.down("md")]: {
                 fontSize: "0.75rem",
               },
-            })}>
+            })}
+          >
             DISPATCH N HAUL
           </Typography>
           <Typography
@@ -75,7 +80,8 @@ const Hero = () => {
               [theme.breakpoints.down("md")]: {
                 fontSize: "2.25rem",
               },
-            })}>
+            })}
+          >
             We are the best company for your dispatch needs.
           </Typography>
           <Typography
@@ -91,10 +97,11 @@ const Hero = () => {
                 fontSize: "0.95rem",
                 width: "95%",
               },
-            })}>
-            We are your one-stop-shop where you can find the highest paying Premium
-            Loads, Shippers Preferred Lanes, Fuel Cards, ELD Compliance, Smart
-            Dash-Cameras, Asset/Trailer Tracking Devices and much more.
+            })}
+          >
+            Your One-Stop Shop for Premium US & Canada Truck Dispatch Services.
+            Get Top-Paying Loads & Preferred Lanes along with dedicated support
+            to keep your wheels moving.
           </Typography>
           <Typography
             variant="h6"
@@ -113,7 +120,8 @@ const Hero = () => {
               },
               cursor: "pointer",
               mt: theme.spacing(3),
-            })}>
+            })}
+          >
             <Avatar
               className="Avatar"
               sx={(theme) => ({
@@ -125,7 +133,8 @@ const Hero = () => {
                   width: 45,
                   height: 45,
                 },
-              })}>
+              })}
+            >
               <ArrowForwardIosIcon
                 color="info"
                 sx={(theme) => ({

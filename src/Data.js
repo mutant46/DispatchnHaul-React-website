@@ -2,8 +2,10 @@ import MailIcon from "@mui/icons-material/Mail";
 import HomeIcon from "@mui/icons-material/Home";
 import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-import HdrStrongIcon from "@mui/icons-material/HdrStrong";
 import WorkIcon from "@mui/icons-material/Work";
+import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
+import EventAvailableIcon from '@mui/icons-material/EventAvailable';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 
 export const pages = [
@@ -68,24 +70,29 @@ export const allPages = [
 
 export const usp = [
   {
-    title: "Professional",
-    desc: "We have professional dispatchers with 5 to 8 years of experience that can make you worth hauling in a second science.",
+    title: "Industry Expertise",
+    desc: "Our experienced dispatchers have a deep understanding of the US and Canada freight market, ensuring you get matched with the best possible loads.",
     icon: <WorkIcon />,
   },
   {
-    title: "Fast & Secure",
-    desc: "Procedures of our services are fast and payment methods are flexible for customer convenience.",
+    title: "Technology-Driven Approach",
+    desc: "We leverage cutting-edge technology to find high-paying loads quickly and efficiently.",
     icon: <ElectricBoltIcon />,
   },
   {
-    title: "Reliable",
-    desc: "We find loads from reliable sources like DAT load Boards, 123 Load Boards, and many other references.",
-    icon: <HdrStrongIcon />,
+    title: "Dedicated Support",
+    desc: "You'll have a dedicated dispatcher by your side throughout the process, providing personalized attention and ensuring your needs are met.",
+    icon: <SupportAgentIcon />,
   },
   {
-    title: "Flexible Plans",
-    desc: "We provide flexible means for payment through the banks, com check, PayPal, Zelle Pay,  or all types of credit and debit cards.",
-    icon: <LocalOfferIcon />,
+    title: "24/7 Availability",
+    desc: "We're here for you whenever you need us, day or night.",
+    icon: <EventAvailableIcon />,
+  },
+  {
+    title: "Commitment to Safety",
+    desc: "We prioritize safety by ensuring loads comply with all regulations and promoting safe driving practices.",
+    icon: <HealthAndSafetyIcon />,
   },
 ];
 
