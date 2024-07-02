@@ -72,6 +72,21 @@ const Index = () => {
           consenting to be contacted by SMS text message. Message & data rates
           may apply. You can reply STOP to opt-out of further messaging.
         </PTypography>
+        <br />
+        <PTypography
+          component="p"
+          sx={(theme) => ({
+            color: "gray",
+            fontWeight: "bold",
+            width: "50%",
+            [theme.breakpoints.down("sm")]: {
+              width: "100%",
+            },
+          })}
+        >
+          The phone numbers we collect and the consent we receive will not be
+          shared with 3rd party providers.
+        </PTypography>
         <Formik
           initialValues={{ ...INITIAL_FORM_STATE }}
           validationSchema={FORM_VALIDATION_SCHEMA}

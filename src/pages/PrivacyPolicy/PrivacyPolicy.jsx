@@ -38,6 +38,7 @@ const PrivacyPolicy = () => {
         please contact us through{" "}
         <a href="mailto:dnh@dispatchnhaul.com">email</a>.
       </p>
+
       <h2>SUMMARY OF KEY POINTS</h2>
       <p>
         This summary provides key points from our privacy notice, but you can
@@ -503,9 +504,20 @@ const PrivacyPolicy = () => {
         Based on the applicable laws of your country, you may have the right to
         request access to the personal information we collect from you, change
         that information, or delete it in some circumstances. To request to
-        review, update, or delete your personal information, please email us at
+        review, update, or delete your personal information, please email us at{" "}
         <a href="mailto:dnh@dispatchnhaul.com">here</a>. We will respond to your
         request within 30 days.
+      </p>
+      <p>
+        <b>
+          Note: The phone numbers we collect and the consent we receive will not
+          be shared with 3rd party providers.
+          <br />
+          No mobile information will be shared with third parties/affiliates for
+          marketing/promotional purposes. All other categories exclude text
+          messaging originator opt-in data and consent; this information will
+          not be shared with any third parties.
+        </b>
       </p>
     </div>
   );
